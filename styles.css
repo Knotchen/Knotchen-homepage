@@ -84,7 +84,7 @@
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 20px 20px;
       text-align: center;
     }
 
@@ -194,6 +194,7 @@
       background: rgba(0, 0, 0, 0.8);
       color: white;
       text-align: center;
+      margin-top: 150px;
     }
 
     .footer a {
@@ -211,42 +212,91 @@
       margin-bottom: 20px;
     }
 
+    .intro-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 50px 0px 50px 0px;
+    }
+
     .member-intro {
       padding: 20px;
       margin: 20px auto;
-      margin-left: 70px;
-      margin-right: 70px;
-      width: 60%;
-      background-color: #f0ed27; /* Yellow background */
-      display: flex; /* Enables flexbox for horizontal alignment */
-      align-items: center; /* Aligns items vertically in the center */
-      gap: 20px; /* Adds space between the text and the image */
+      border-radius: 0px 9999px 9999px 0px;
+      width: 50%;
+      height: 30vh;
+      gap: 20px;
+      justify-content: space-between;
     }
     
     .member-intro p {
       margin: 0;
-      flex: 1; /* Ensures the paragraph takes up available space */
+      display: flex;
+      flex: 1;
       font-size: 16px;
+      justify-content: flex-start;
+      align-items: flex-start;
       flex-direction: column;
       color: #000;
     }
     
     .member-intro img {
-      max-height: 300px;
-      max-width: 300px;
+      max-height: 220px;
+      max-width: 220px;
+      height: auto;
+      margin-left: 20px;  
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex; /* Enables flexbox for horizontal alignment */
+      align-items: center; /* Aligns items vertically in the center */
+      float: right;
       flex-shrink: 0; /* Prevents the image from shrinking */
-      margin-bottom: 0px;
       background-color: white;
       clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+      object-fit: contain;
+    }
+
+    .member-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: rgb(59, 59, 59);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #595959;
+      border-radius: 30px;
+    }
+
+    .member-btn:hover {
+      background: #565656;
+      color: #fede0a;
+      cursor: pointer;
+    }
+
+    .memberBanner-left {
+      background-color: white;
+      width: 60%;
+      height: 40vh;
+      overflow: hidden;
+    }
+
+    .memberBanner-left img {
+      max-width: 100%;
+      max-height: 80%;
     }
 
     #mainno {
       background-color: #f0ed27;
       color: black;
+      margin-left: 70px;
     }
 
     #grass {
       background-color: rgb(52, 202, 52);
       color: black;
       float: right;
+      margin-right: 70px;
+      border-radius: 9999px 0px 0px 9999px;
     }
