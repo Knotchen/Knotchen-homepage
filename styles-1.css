@@ -1,0 +1,302 @@
+   .body-main {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #eadb63ec, #e5e34c, #d9d985);
+      background-size: 300% 300%;
+      animation: gradientBG 6s infinite alternate;
+      color: rgb(48, 48, 48);
+      overflow-x: hidden;
+    }
+
+    .body-intro {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #393937ec, #494947, #676755);
+      background-size: 300% 300%;
+      animation: gradientBG 6s infinite alternate;
+      color: rgb(255, 255, 255);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #fede0a;
+      text-decoration: none;
+    }
+
+    .header {
+      background-color: #474747;
+      height: 13%;
+      display: flex;
+    }
+
+    .header-items {
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      width: 600px;
+      font-size: large;
+      font-weight: bold;
+      text-align: left; 
+      padding-top: 70px;
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+
+    @keyframes bouncing {
+      0%, 20%, 50%, 80%, 100% {opacity: 0; transform: translateY(0);}
+      0% {opacity: 1; transform: translateY(-30px);} 
+      50% {opacity: 1; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(-30px);}
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes fadeInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-200px); /* Starts 50px to the left */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0); /* Ends in the original position */
+      }
+    }
+
+    @keyframes fadeInFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(200px); /* Starts 50px to the left */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0); /* Ends in the original position */
+      }
+    }
+
+    .section {
+      padding: 20px 20px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3rem;
+      color: #474747;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInFromLeft 1s ease-out;
+      animation-fill-mode: forwards;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      opacity: 0;
+      animation: fadeInFromLeft 1s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
+
+    .section p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .btn-knowmore {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: rgb(59, 59, 59);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #595959;
+      border-radius: 30px;
+      opacity: 0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: fadeInFromRight 1s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+    }
+
+    .btn-knowmore:hover {
+      background: #595959;
+      color: #fede0a;
+      transform: scale(1.1);
+    }
+
+    .scrolldown {
+      height: 30px;
+      width: 230px;
+      justify-self: center;
+      font-size: medium;
+      background:rgb(48, 48, 48);
+      color: white;
+      border-radius: 100px;
+      opacity: 0;
+      animation: bouncing 6s infinite;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      padding: 5px 10px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .team {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 20px;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .team img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 10px;
+    }
+
+    .team h2 {
+      font-size: 1.8rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .footer a {
+      color: #fede0a;
+      text-decoration: none;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .non-main-title {
+      font-size: 50px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .intro-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 50px 0px 50px 0px;
+    }
+
+    .member-intro {
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 0px 9999px 9999px 0px;
+      width: 50%;
+      height: 30vh;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .member-intro p {
+      margin: 0;
+      display: flex;
+      flex: 1;
+      font-size: 16px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      color: #000;
+    }
+    
+    .member-intro img {
+      max-height: 220px;
+      max-width: 220px;
+      height: auto;
+      margin-left: 20px;  
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex; /* Enables flexbox for horizontal alignment */
+      align-items: center; /* Aligns items vertically in the center */
+      float: right;
+      flex-shrink: 0; /* Prevents the image from shrinking */
+      background-color: white;
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+      object-fit: contain;
+    }
+
+    .member-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: rgb(59, 59, 59);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #595959;
+      border-radius: 30px;
+    }
+
+    .member-btn:hover {
+      background: #565656;
+      color: #fede0a;
+      cursor: pointer;
+    }
+
+    .memberBanner-left {
+      background-color: white;
+      width: 60%;
+      height: 40vh;
+      overflow: hidden;
+    }
+
+    .memberBanner-left img {
+      max-width: 100%;
+      max-height: 80%;
+    }
+
+    #mainno {
+      background-color: #f0ed27;
+      color: black;
+      margin-left: 70px;
+    }
+
+    #grass {
+      background-color: rgb(52, 202, 52);
+      color: black;
+      float: right;
+      margin-right: 70px;
+      border-radius: 9999px 0px 0px 9999px;
+    }
