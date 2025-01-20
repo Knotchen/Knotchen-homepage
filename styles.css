@@ -7,6 +7,8 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #ffe600;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         header {
@@ -27,39 +29,159 @@
         .content {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 20px;
             background-color: #ffe600;
+
         }
 
         .banner {
-            height: 600px;
             display: flex;
             justify-content: space-between;
+            height: 600px;
             width: 100%;
+            position: relative;
         }
 
         .teamfoto {
             background-color: #ddd;
             height: 100%;
-            width: 80%;
+            width: 1300px;
             clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
             object-fit: cover;
+            position: absolute;
+            right:20%;
+        }
+
+        .teamfoto img {
+            max-width: 100%;
+            height: auto;
         }
 
         .knotchenBanner {
-            max-width: 500px;
-            max-height: 180px;
-            margin: 150px 50px 0 950px;
+            width: 600px;
+            height: auto;
             position: absolute;
+            top: 30%;
+            right: 5%;
         }
 
         .knotchenQuote {
-            max-width: 1000px;
-            max-height: 70px;
-            margin: 430px 30px 0 750px;
+            width: 700px;
+            height: auto;
             position: absolute;
+            top: 70%;
+            right: 5%;
+        }
+
+        .scrollDown {
+            color: white;
+            background-color: #4c4c4c;
+            width: 20%;
+            padding: 1%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-top: 3%;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .news {
+            justify-content: center;
+            width: 80%;
+            height: 600px;
+            align-items: center;
+            display: flex;
+        }
+
+        .newsBanner {
+            width: 90%;
+            height: auto;
+            margin: 5% 10% 5% 10%;
+        }
+
+        .socialMedBlk {
+            height: 80%;
+            width: 100%;
+            margin: 0 5% 10% 10%;
+            background-color: #a9a9a9;
+            display: block;
+            border-radius: 20px;
+            justify-content: space-between;
+        }
+        
+        .groupIntro {
+            justify-content: center;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+        }
+
+        .groupBanner {
+            width: 90%;
+            height: auto;
+            margin: 5% 10% 5% 5%;
+            align-self: center;
+        }
+
+        .groupIcon {
+            margin: 0 10% 10% 10%;
+            max-width: 50%;
+            height: auto;
+            max-height: 100%;
+        }
+
+        .groupText {
+            height: 60%;
+            width: 70%;
+            background-color: #4c4c4c;
+            color: white;
+            border-radius: 10px 0 0 10px;
+            margin: 3% 0 10% 0;
+            padding: 3%;
+            font-size: 24px; 
+            text-align: left;
+        }
+
+        .otherLinks {
+            height: 100vh;
+            width: 65%;
+            align-self: flex-start;
+            background-color:#4c4c4c;
+            color: white;
+            padding: 5%;
+        }
+
+        .otherLinks h1 {
+            margin: 0 25% 0 25%;
+        }
+
+        .linkCont {
+            height: 70vh;
+            width: 100%;
+            align-self: center;
+            margin-left: 5%;
+            display: flex;
+        }
+
+        .linkBtnCont {
+            height: 500px;
+            width: 45%;
+            align-content: center;
+        }
+
+        .linkButton {
+            max-width: 70%;
+            max-height: 40%;
+            margin: 10% 10% 0 10%;
+        }
+
+        .linkButton :hover {
+            cursor: pointer;
         }
 
         .banner .text {
@@ -79,28 +201,4 @@
             font-size: 18px;
             color: #666;
             margin-top: 10px;
-        }
-
-        .button {
-            background-color: #008cba;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .yellow-section {
-            background-color: #ffe600;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .yellow-section h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .yellow-section p {
-            font-size: 16px;
         }
