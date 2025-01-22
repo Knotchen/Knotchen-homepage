@@ -5,22 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>心結廚房 - Knotchen</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const charButtons = document.querySelectorAll('.charSelect');
+
+      charButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+          const displayID = button.id.replace('Btn', '');
+
+          const charDisplays = document.querySelectorAll('.charBanner, .textBlock, .charClipArt');
+          charDisplays.forEach((charDisplay) => {
+            charDisplay.style.display = 'none';
+          });
+
+          const elementsDisplay = document.querySelectorAll(`#${displayID}`);
+          elementsDisplay.forEach((el) => {
+            el.style.display = 'block';
+          });
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
   <header>
     <div>
-        <a href="#">每月料理</a>
+        <a href="心結廚房 - 每月料理.html">每月料理</a>
         <a href="心結廚房 - 廚師介紹.html" class="onPage">團員介紹</a>
-        <a href="#">TRPG跑團記錄</a>
-        <a href="#">遊戲專區</a>
-        <a href="#">廚房宇宙</a>
+        <a href="心結廚房 - 每月料理.html">TRPG跑團記錄</a>
+        <a href="心結廚房 - 遊戲專區.html">遊戲專區</a>
+        <a href="心結廚房 - 廚房宇宙.html">廚房宇宙</a>
+        <a href="心結廚房 - 聯絡我們.html">聯絡我們</a>
     </div>
     <a href="心結廚房 - Knotchen.html" class="homeText">
         回到主頁
     </a>
 </header>
 
+
+
+<div class="aboutUsCont">
+  <div class="charIntroWrap">
+    <img class="subpageBanner" src="aboutUsBanner.png">
+
+    <img class="charBanner" id="MaInNo" src="MaInNo-banner.png">
+    <div class="textBlock" id="MaInNo">
+      <p>
+        熱愛遊戲的普通人，在Youtuber爆紅的時代開始接觸網絡，並以成為一名遊戲實況主為夢想，召集身邊的各路好友組成了娛樂團體 ‘心結廚房’。有傳聞指泡麵是整個廚房打遊戲最強的骨灰級玩家，在影格戰鬥中頗有修為。
+      </p>
+      <p>
+        實力是群龍之首卻不傾向成為群體領袖，導致了廚房特殊的無政府狀態。但是在泡麵的愛心澆灌下，成員們總能在心結中和諧共處。
+      </p>
+    </div>
+
+    <img class="charBanner" id="grass" src="grass-banner.png">
+    <div class="textBlock" id="grass">
+      <p>
+        一名大學工程師，路邊的一株草，廚房御用的工程師，作息及睡眠時數永遠是一個迷，幾乎24小時都能看到雜草的discord在線。受到邀請加入 ‘心結廚房’，並展開了另一段被勞役的肝健康生活。
+      </p>
+      <p>
+        現正攻讀AI詠唱魔法專員的學位，有著把人類都變成馬鈴薯，日常工作全交給機器人處理的野心。總喜歡將自己各種奇奇怪怪的發明引入廚房，造成廚房爆炸危機。
+      </p>
+    </div>
+
+    <img class="charBanner" id="dobird" src="bird-banner.png">
+    <div class="textBlock" id="dobird">
+      <p>
+        代號 ‘渡鳥’，穿梭在網絡世界的數碼刺客。熱愛跑酷、畫圖、建模等養肝活動，除了會進行網絡刺殺活動外，亦有指揮軍事防守行動的經驗。在等待畢業期間被友人拐進了 ‘心結廚房’，成為了一名新手遊戲直播主。
+      </p>
+      <p>
+        高端的食材往往需要樸素的料理方法。作為心結廚房的下鍋第一名，渡鳥極力讓自己成為瀕危物種以免遭殃，但面對台灣人感人的保育意識似乎並不起效，還是很愛有人喊讓她下鍋。至此，瀕危物種的反擊戰即將開打...
+      </p>
+    </div>
+
+    <img class="charBanner" id="honey" src="honey-banner.png">
+    <div class="textBlock" id="honey">
+      <p>
+        出身不明，來歷不明的擬態生物，以 ‘幽靈貓’ 自居生活在城市裡的神秘少女，為了賺外快加入了 ‘心結廚房’。基於自身散發出的不穩定磁場，每次直播時麥克風都總是很炸，因而成為直播中的個人特色。
+      </p>
+      <p>
+        熱愛TRPG，誓言要把骰子機器人娶回家。作為一隻幽靈貓，鬼點子特別多，然而是挖坑小能手，想到一出是一出，完美發揮出三分鐘熱度的本性，不愧是貓咪。
+      </p>
+    </div>
+
+    <img class="charBanner" id="zeroOne" src="zeroOne-banner.png">
+    <div class="textBlock" id="zeroOne">
+      <p>
+        現居台灣的普通打工人，身體素質絕佳的年輕男子，年紀輕輕卻有著阿公的靈魂。泡麵的大學室友，輾轉加入了 ‘心結廚房’ ，作為一名DM及實況主活躍在其中。
+      </p>
+      <p>
+        踐行 ‘開拓’ 之道，樂於與不同的人建立關係。全廚房生活習慣最為健康的成員，在團體中擔任正能量大使，
+      </p>
+      <p>
+        “已經沒關係了，因為我來了！這發心結我來扛！！”
+      </p>
+    </div>
+  </div>
+
+  <img class="charClipArt" id="MaInNo" src="deafultClipArt.png">
+  <img class="charClipArt" id="grass" src="deafultClipArt.png">
+  <img class="charClipArt" id="dobird" src="deafultClipArt.png">
+  <img class="charClipArt" id="honey" src="deafultClipArt.png">
+  <img class="charClipArt" id="zeroOne" src="deafultClipArt.png">
+
+  <div class="otherChar">
+    <img class="aboutUsMore" src="aboutUsMore.png">
+    <div class="charMenu">
+      <img class="charSelect" id='MaInNoBtn' src="MaInNo-default.png" onclick="">
+      <img class="charSelect" id='grassBtn' src="grass-default.png" onclick="">
+      <img class="charSelect" id='dobirdBtn' src="bird-default.png" onclick="">
+      <img class="charSelect" id='honeyBtn' src="honey-default.png" onclick="">
+      <img class="charSelect" id='zeroOneBtn' src="zeroOne-default.png" onclick="">
+    </div>
+   
+  </div>
+ 
+</div>
 
 </body>
 
