@@ -317,7 +317,7 @@
         
         .otherChar {
             max-width: 25%;
-            height: 80%;
+            height: 100%;
             margin: 3% 0 0 0;
             float: right;
         }
@@ -345,9 +345,10 @@
         
 
         .charSelected {
-            max-width: 100%;
+            max-width: 90%;
             height: auto;
             margin: 0 0 3% 0;
+            float: right;
         }
 
         .charSelect {

@@ -24,6 +24,24 @@
           elementsDisplay.forEach((el) => {
             el.style.display = 'block';
           });
+
+          charButtons.forEach((btn) => {
+            const btnID = btn.id.replace('Btn', '');
+            const btnImg = btn.querySelector('img');
+            if (btnImg) {
+              btnImg.src = `${btnID}-default.png`; // Change to the default image
+            }
+            btn.classList.remove('charSelected');
+            btn.classList.add('charSelect');
+          });
+
+          const buttonImg = button.querySelector('img');
+          if (buttonImg) {
+            buttonImg.src = `${displayID}-chosen.png`;
+          }
+          console.log(displayID);
+          button.classList.remove('charSelect');
+          button.classList.add('charSelected');
         });
       });
     });
@@ -94,13 +112,43 @@
     <img class="charBanner" id="zeroOne" src="zeroOne-banner.png">
     <div class="textBlock" id="zeroOne">
       <p>
-        現居台灣的普通打工人，身體素質絕佳的年輕男子，年紀輕輕卻有著阿公的靈魂。泡麵的大學室友，輾轉加入了 ‘心結廚房’ ，作為一名DM及實況主活躍在其中。
+        （謎之聲：為了讓自己看起來不像是個突兀的錯誤代碼，所以本人希望用正體，但是還是可以叫他01。）現居台灣的普通打工人，身體素質絕佳的年輕男子，年紀輕輕卻有著阿公的靈魂。泡麵的大學室友，輾轉加入了 ‘心結廚房’ ，作為一名DM及實況主活躍在其中。
       </p>
       <p>
         踐行 ‘開拓’ 之道，樂於與不同的人建立關係。全廚房生活習慣最為健康的成員，在團體中擔任正能量大使，為大家在心結生活中帶來多一點人情味。
       </p>
       <p>
         “已經沒關係了，因為我來了！這發心結我來扛！！”
+      </p>
+    </div>
+
+    <img class="charBanner" id="karlos" src="karlos-banner.png">
+    <div class="textBlock" id="karlos">
+      <p>
+        號外！廚房居然出現了傳說中的黑衣劍士？！左手的刀用來斬生肉，右手的刀用來處理熟肉...正是廚師之一的卡卡，颯爽登場！人生格言正是 ‘快一點，再快一點’ 的衝動型玩家，可想而知能為廚房帶來不一樣的火花跟歡樂。
+      </p>
+      <p>
+        自詡廚房中的為大家帶來歡樂的低能兒，卻比任何人都要努力的熱血騷年，目前在TRPG及RP區塊中相當活躍，也是一名老練的魔物獵人。
+      </p>
+    </div>
+
+    <img class="charBanner" id="skye" src="skye-banner.png">
+    <div class="textBlock" id="skye">
+      <p>
+        “什麼？這個專案要今天趕完？” “蛤？廚房又有心結又有人受傷需要聊聊了喔？” “怎了，又有好看的RP劇情想要我漫畫化嗎？”
+      </p>
+      <p>
+        做委託不問價錢，挖坑沒有半點猶豫的自由傭兵，沒有她做不到的，只要她想不到要做的！沒有人知道斯凱的技能點到底從何而來，不過這恐怕與她作為世界線穿越者的身份有關。
+      </p>
+      <p>
+        活躍於廚房RP及角色創作區塊，將創作視為對平行世界的觀察，喜歡記錄角色一舉一動、心理狀況的世界記錄員。不常在實況出現，卻總會告訴大家自己又收了哪款老遊戲的模擬器改版。
+      </p>
+    </div>
+
+    <img class="charBanner" id="jkiol" src="jkiol-banner.png">
+    <div class="textBlock" id="jkiol">
+      <p>
+        
       </p>
     </div>
   </div>
@@ -110,15 +158,22 @@
   <img class="charClipArt" id="dobird" src="deafultClipArt.png">
   <img class="charClipArt" id="honey" src="deafultClipArt.png">
   <img class="charClipArt" id="zeroOne" src="deafultClipArt.png">
+  <img class="charClipArt" id="karlos" src="deafultClipArt.png">
+  <img class="charClipArt" id="skye" src="deafultClipArt.png">
+  <img class="charClipArt" id="jkiol" src="deafultClipArt.png">
 
   <div class="otherChar">
     <img class="aboutUsMore" src="aboutUsMore.png">
     <div class="charMenu">
-      <img class="charSelect" id='MaInNoBtn' src="MaInNo-default.png" onclick="">
-      <img class="charSelect" id='grassBtn' src="grass-default.png" onclick="">
-      <img class="charSelect" id='dobirdBtn' src="bird-default.png" onclick="">
-      <img class="charSelect" id='honeyBtn' src="honey-default.png" onclick="">
-      <img class="charSelect" id='zeroOneBtn' src="zeroOne-default.png" onclick="">
+      <img class="charSelect" id='MaInNoBtn' src="MaInNo-default.png">
+      <img class="charSelect" id='grassBtn' src="grass-default.png">
+      <img class="charSelect" id='dobirdBtn' src="bird-default.png">
+      <img class="charSelect" id='honeyBtn' src="honey-default.png">
+      <img class="charSelect" id='zeroOneBtn' src="zeroOne-default.png">
+      <img class="charSelect" id='karlosBtn' src="zeroOne-default.png">
+      <img class="charSelect" id='skyeBtn' src="zeroOne-default.png">
+      <img class="charSelect" id='jkiolBtn' src="zeroOne-default.png">
+      
     </div>
    
   </div>
