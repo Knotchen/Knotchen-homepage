@@ -29,7 +29,7 @@
           charButtons.forEach((btn) => {
             const btnID = btn.id.replace('Btn', '');
             if (btn) {
-              btn.src = `${btnID}-default.png`; // Change to the default image
+              btn.src = `${btnID}-default.png`;
             }
             btn.classList.remove('charSelected');
             btn.classList.add('charSelect');
@@ -52,7 +52,7 @@
     <div>
         <a href="心結廚房 - 每月料理.html">每月料理</a>
         <a href="心結廚房 - 廚師介紹.html" class="onPage">團員介紹</a>
-        <a href="心結廚房 - 每月料理.html">TRPG跑團記錄</a>
+        <a href="心結廚房 - 跑團記錄.html">TRPG跑團記錄</a>
         <a href="心結廚房 - 遊戲專區.html">遊戲專區</a>
         <a href="心結廚房 - 廚房宇宙.html">廚房宇宙</a>
         <a href="心結廚房 - 聯絡我們.html">聯絡我們</a>
@@ -62,11 +62,11 @@
     </a>
 </header>
 
-
-
-<div class="aboutUsCont">
+<img class="subpageBanner" src="aboutUsBanner.png">
+<div class="pageCont">
+  
   <div class="charIntroWrap">
-    <img class="subpageBanner" src="aboutUsBanner.png">
+    
 
     <img class="charBanner" id="MaInNo" src="MaInNo-banner.png">
     <div class="textBlock" id="MaInNo">
@@ -150,8 +150,19 @@
         偶然會跟廚房一起在遊戲世界中跑酷，也在會圍攻行動中用各種花式以及網絡延遲把大家耍得團團轉，不過聽說他還有別的秘密...？
       </P>
     </div>
+
+    <img class="charBanner" id="jkiol" src="jkiol-banner.png">
+    <div class="textBlock" id="jkiol">
+      <p>
+        真正的混亂中立廚房老么，來自異空間的貓耳少年（？），神出鬼沒，沒事會用各種怪奇點子讓你的生活增添刺激。加入廚房的動機不明，但相信不會有人拒絕這位愛搞事搞氣氛的貓咪。
+      </p>
+      <P>
+        偶然會跟廚房一起在遊戲世界中跑酷，也在會圍攻行動中用各種花式以及網絡延遲把大家耍得團團轉，不過聽說他還有別的秘密...？
+      </P>
+    </div>
   </div>
 
+<div class="clipArtCtn">
   <img class="charClipArt" id="MaInNo" src="deafultClipArt.png">
   <img class="charClipArt" id="grass" src="deafultClipArt.png">
   <img class="charClipArt" id="dobird" src="deafultClipArt.png">
@@ -161,23 +172,30 @@
   <img class="charClipArt" id="skye" src="deafultClipArt.png">
   <img class="charClipArt" id="jkiol" src="deafultClipArt.png">
 
+</div>
+
+
   <div class="otherChar">
     <img class="aboutUsMore" src="aboutUsMore.png">
-    <div class="charMenu">
-      <img class="charSelect" id='MaInNoBtn' src="MaInNo-default.png">
-      <img class="charSelect" id='grassBtn' src="grass-default.png">
-      <img class="charSelect" id='dobirdBtn' src="dobird-default.png">
-      <img class="charSelect" id='honeyBtn' src="honey-default.png">
-      <img class="charSelect" id='zeroOneBtn' src="zeroOne-default.png">
-      <img class="charSelect" id='karlosBtn' src="karlos-default.png">
-      <img class="charSelect" id='skyeBtn' src="skye-default.png">
-      <img class="charSelect" id='jkiolBtn' src="jkiol-default.png">
+    <div class="aboutUsMenu">
+      <div class="charMenu">
+        <img class="charSelect" id='MaInNoBtn' src="MaInNo-chosen.png">
+        <img class="charSelect" id='grassBtn' src="grass-default.png">
+        <img class="charSelect" id='dobirdBtn' src="dobird-default.png">
+        <img class="charSelect" id='honeyBtn' src="honey-default.png">
+        <img class="charSelect" id='zeroOneBtn' src="zeroOne-default.png">
+        <img class="charSelect" id='karlosBtn' src="karlos-default.png">
+        <img class="charSelect" id='skyeBtn' src="skye-default.png">
+        <img class="charSelect" id='jkiolBtn' src="jkiol-default.png">
       
     </div>
-   
+    </div>
+
   </div>
- 
+  <div class="bottom">@心結廚房2025</div>
 </div>
+
+
 
 </body>
 
