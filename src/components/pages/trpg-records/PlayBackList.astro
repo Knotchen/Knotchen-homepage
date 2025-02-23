@@ -1,0 +1,73 @@
+---
+const playbacks = [
+  {
+    url: "https://www.youtube.com/watch?v=KvR7RDmddIo",
+    title: "沼澤人00-普通的車卡回",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=hT4TulaozrA",
+    title: "沼澤人01-骰運大起大落",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=5npuf3LZx2g",
+    title: "沼澤人02-怪物",
+  },
+];
+---
+
+<div class="otherPlaybacks">
+  <h1>更多回放</h1>
+  <div class="listOfPlaybacks">
+    {
+      playbacks.map((item) => (
+        <a href={item.url} class="playbacks" target="_blank">
+          {item.title}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  /*其他回放列表區塊*/
+  .otherPlaybacks {
+    width: 20%;
+    height: 70vh;
+    background-color: #4c4c4c;
+    margin-left: 5%;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    opacity: 0;
+    animation: fadeInRight 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+
+  .otherPlaybacks h1 {
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+
+  /*影片列表*/
+  .listOfPlaybacks {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin: 5%;
+  }
+
+  .otherPlaybacks ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*影片鏈接*/
+  .playbacks {
+    display: block;
+    margin-top: 5%;
+    padding: 3%;
+    background-color: #fffc4c;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  }
+</style>
