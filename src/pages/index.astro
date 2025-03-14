@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_HK/sdk.js#xfbml=1&version=v22.0"></script>
   <div class="content">
     <div class="banner">
       <img class="teamfoto" src="/placeholder.png" alt="我是酷炫圖片" />
@@ -21,8 +23,10 @@ import Layout from "../layouts/Layout.astro";
     />
 
     <div class="news">
-      <div class="socialMedBlk observe-left">哈哈屁眼</div>
-      <div class="socialMedBlk observe-left">哈哈屁眼</div>
+      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/HonkaiStarRail" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    </div>
+      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
     </div>
 
     <img

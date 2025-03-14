@@ -108,7 +108,7 @@ body {
 
 /*心結廚房大字*/
 .knotchenBanner {
-  width: 600px;
+  width: 70vh;
   height: auto;
   position: absolute;
   top: 30%;
@@ -120,10 +120,10 @@ body {
 
 /*心結廚房格言*/
 .knotchenQuote {
-  width: 700px;
+  width: 70vh;
   height: auto;
   position: absolute;
-  top: 70%;
+  top: 50vh;
   right: 5%;
   opacity: 0;
   animation: fadeInLeft 1s ease-out;
@@ -175,7 +175,7 @@ body {
 
 /*最新資訊標題*/
 .newsBanner {
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 5% 10% 5% 10%;
 }
@@ -194,7 +194,6 @@ body {
   height: 80%;
   width: 100%;
   margin: 0 5% 10% 10%;
-  background-color: #a9a9a9;
   display: block;
   border-radius: 20px;
   justify-content: space-between;
@@ -202,7 +201,7 @@ body {
 
 /*團體介紹標題*/
 .groupBanner {
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 5% 10% 5% 5%;
   align-self: center;
