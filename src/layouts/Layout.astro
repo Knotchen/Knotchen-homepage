@@ -73,14 +73,14 @@ import Footer from "../components/Footer.astro";
             charButtons.forEach((btn) => {
               const btnID = btn.id.replace("Btn", "");
               if (btn) {
-                (btn as HTMLImageElement).src = `${btnID}-default.png`;
+                (btn as HTMLImageElement).src = `/${btnID}-default.png`;
               }
               btn.classList.remove("charSelected");
               btn.classList.add("charSelect");
             });
 
             if (button) {
-              (button as HTMLImageElement).src = `${displayID}-chosen.png`;
+              (button as HTMLImageElement).src = `/${displayID}-chosen.png`;
             }
             console.log(displayID);
             button.classList.remove("charSelect");
