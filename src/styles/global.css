@@ -310,6 +310,7 @@ body {
   width: 100%;
   max-height: 75vh;
   display: flex;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -350,13 +351,14 @@ body {
 .clipArtCnt {
   height: auto;
   width: 35%;
-  float: left;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*立繪*/
 .charClipArt {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   opacity: 0;
   animation: fadeInRight 0.3s ease-out;
@@ -368,14 +370,11 @@ body {
 .otherChar {
   max-width: 25%;
   height: 100%;
-  float: right;
   display: grid;
   opacity: 0;
   animation: fadeInRight 0.3s ease-out;
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
-  position: relative;
-  right: 0;
 }
 
 /*團員一覽字樣*/
@@ -434,60 +433,26 @@ body {
   display: block;
 }
 
-  /*其他回放列表區塊*/
-  .otherPlaybacks {
-    width: 20%;
-    height: 70vh;
-    background-color: #4c4c4c;
-    margin-left: 5%;
-    border-radius: 20px 0 0 20px;
-    text-align: center;
-    color: white;
-    padding: 1%;
-    opacity: 0;
-    animation: fadeInRight 1s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-  }
-
-  .otherPlaybacks h1 {
-    font-weight: bold;
-    margin-bottom: 10%;
-  }
-
-  /*影片列表*/
-  .listOfPlaybacks {
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    margin: 5%;
-  }
-
-  .otherPlaybacks ::-webkit-scrollbar {
-    display: none;
-  }
-
-  /*影片鏈接*/
-  .playbacks {
-    display: block;
-    margin-top: 5%;
-    padding: 3%;
-    background-color: #fffc4c;
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  .trpgCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
   }
 
    /*跑團即心結圖片區塊*/
   .trpg-des-wrap {
-    width: 40%;
-    height: auto;
-    float: left;
-    padding: 3%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
   }
 
   /*跑團即心結圖片介紹*/
   .trpgSlogan {
     width: 80%;
-    margin-left: 5%;
     opacity: 0;
     animation: fadeInUp 0.5s;
     animation-fill-mode: forwards;
@@ -495,55 +460,95 @@ body {
 
   /*回放區塊*/
   .trpgWrap {
-    width: 50%;
-    height: 70vh;
-    float: left;
+    height: 130vh;
+    width: 70%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  /*系統及劇本名稱*/
-  .trpgName {
-    width: 60%;
-    height: auto;
-    align-self: center;
-    margin: 5% 0 0 5%;
-    opacity: 0;
-    animation: fadeInLeft 1s;
-    animation-fill-mode: forwards;
+  .trpgWrap > a { /* Target the direct <a> child of .trpgWrap */
+  display: block;
+  width: 40%; 
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
   }
 
   /*回放影片縮圖*/
   .videoThumbnail {
     width: 60%;
-    margin: 5% 5% 0 10%;
+    margin: 5% auto 0 auto;
     opacity: 0;
     animation: fadeInLeft 1s;
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
   }
 
-  /*最新集數*/
-  .lastestEp {
-    width: 65%;
-    margin: 5% 5% 0 10%;
-    position: relative;
-    opacity: 0;
-    animation: fadeInLeft 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-  }
-
   /*開始播放按鈕*/
   .playButton {
-    width: 20%;
-    margin: 5% 0 10% -10%;
-    position: absolute;
+    width: 100%;
     opacity: 0;
     animation: fadeInLeft 1s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
   }
 
-  .playButton:hover {
-    transition: transform 1s ease;
-    transform: scale(1.2);
+  /*回放列表標題*/
+  .otherPlaybacks {
+    margin-top: 10%;
+    max-width: 20%;
+    opacity: 0;
+    align-items: flex-start;
+    animation: fadeInRight 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
   }
+
+  .playbackCont{
+    height:50vh;
+    width: 90%;
+    margin: 5%;
+    background-color: #494949;
+    border-radius: 10px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    }
+    padding: 10px;
+    opacity: 0;
+    animation: fadeInRight 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    row-gap: 15px;
+  }
+
+  .playbackCont a {
+    width: calc(50% - 5px);
+    color: #eee;
+  }
+
+  .playbackCont a img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.playbackCont a .vidTitle {
+  font-size: 0.9em;
+  text-align: center;
+  color: #eee;
+  margin: 0; 
+  padding: 0;
+}
