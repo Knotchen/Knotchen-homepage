@@ -536,6 +536,9 @@ body {
 
   .playbackCont a {
     width: calc(50% - 5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #eee;
   }
 
@@ -546,9 +549,9 @@ body {
 }
 
 .playbackCont a .vidTitle {
-  font-size: 0.9em;
+  font-size: 1.2em;
   text-align: center;
-  color: #eee;
+
   margin: 0; 
   padding: 0;
 }
