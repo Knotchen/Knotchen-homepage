@@ -2,9 +2,36 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Games">
+<Layout title="Games" showFooter={false}>
   <img class="subpageBanner" src="/gamesBanner.png" />
+  <img class="gamesTitle" src="/games-title.png" />
   <div class="pageCont">
     
+    <div class="gamesCont">
+      <img class="gamesBackground" src="/games-bg.png" />
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="games-fps.png" />
+        <div class="gamesReplayCont">
+
+        </div>
+      </div>
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="games-fps.png" />
+        <div class="gamesReplayCont">
+
+        </div>
+      </div>
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="games-fps.png" />
+        <div class="gamesReplayCont">
+
+        </div>
+      </div>
+
+    </div>
+    </div>
   </div>
+  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
 </Layout>
