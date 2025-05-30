@@ -17,7 +17,7 @@ const { title, showFooter = true } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/knotchen-logo.png" />
     <meta name="generator" content={Astro.generator} />
 
     <title>Knotchen 心結廚房</title>
@@ -95,6 +95,35 @@ const { title, showFooter = true } = Astro.props;
           });
         });
       });
+
+      //回到主頁
+      document.addEventListener('DOMContentLoaded', function() {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.onscroll = function() {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = 'block'; // Show the button
+          } else {
+            backToTopBtn.style.display = 'none'; // Hide the button
+          }
+        }
+
+          backToTopBtn.onclick = function() {
+            // Smooth scroll for modern browsers
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+      });
+
+
     </script>
   </head>
 
