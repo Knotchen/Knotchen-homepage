@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+
+import Layout from "../layouts/Layout-Eng.astro";
+---
+
+<Layout title="Home Page" showFooter={false}>
+  <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_HK/sdk.js#xfbml=1&version=v22.0"></script>
+  <div class="content">
+    <div class="banner">
+      <img class="teamfoto" src="/test-Img.png" alt="Team photo" />
+      <img class="knotchenBanner" src="/knotchenBanner-Eng.png" alt="Knotchen" />
+      <img class="knotchenQuote" src="/knotchenQuote-Eng.png" alt="Knotchen Quotes" />
+    </div>
+
+    <div class="scrollDown">Scroll for more! ⭣</div>
+
+    <img
+      class="newsBanner observe-left"
+      src="/knotchenNews-Eng.png"
+      alt="News"
+    />
+
+    <div class="news">
+      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61574492781953" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    </div>
+      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+    </div>
+
+    <img
+      class="groupBanner observe-right"
+      src="/knotchenGroup-Eng.png"
+      alt="團體介紹"
+    />
+
+    <div class="groupIntro">
+      <img class="groupIcon observe-left" src="/circle-icon.png" />
+      <div class="groupText observe-left">
+        In 2018, a group of jaded yet dream-filled individuals from Taiwan decided to start a 
+        side hustle as an entertainment group, becoming YouTube gaming streamers. Eventually, 
+        they stumbled upon TRPGs and went on to create a role-playing universe filled with 
+        personal original content. Today, Knotchen has evolved into a collective of creators
+         — though gaming still remains their core business.
+      </div>
+    </div>
+
+    <div class="otherCont">
+     <div class="otherLinks observer-left">
+      <h1>Get to Know More About Us</h1>
+      <div class="linkCont">
+        <div class="linkBtnCont">
+          <a href="/monthly-recipes">
+            <img class="linkButton" src="/monthlyLink-Eng.png" />
+          </a>
+          <a href="/chefs">
+            <img class="linkButton" src="/aboutUsLink-Eng.png" />
+          </a>
+          <a href="/trpg-records">
+            <img class="linkButton" src="/trpgLink-Eng.png" />
+          </a>
+        </div>
+        <div class="linkBtnCont">
+          <a href="/games">
+            <img class="linkButton" src="/gamesLink-Eng.png" />
+          </a>
+          <a href="/kitchen-universe">
+            <img class="linkButton" src="/creationsLink-Eng.png" />
+          </a>
+          <a href="/contact">
+            <img class="linkButton" src="/contactsLink-Eng.png" />
+          </a>
+        </div>
+      </div>
+      <p>@Knotchen 2025</p>
+    </div>
+    <img class="footerImg" src="/test-Img.png">
+    </div>
+    </div>
+  </div>
+    <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
+</Layout>

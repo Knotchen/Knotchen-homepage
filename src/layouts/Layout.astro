@@ -1,8 +1,11 @@
 ---
 import "../styles/global.css";
-
-import Header from "../components/Header.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Header from '../components/Header.astro'; // This will be the Header we're modifying
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import Footer from "../components/Footer.astro";
+
 
 interface Props {
   title: string;
@@ -20,7 +23,7 @@ const { title, showFooter = true } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/knotchen-logo.png" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Knotchen 心結廚房</title>
+    <title> Knotchen 心結廚房 </title>
 
     <!-- Bootstrap -->
     <link
@@ -128,7 +131,7 @@ const { title, showFooter = true } = Astro.props;
   </head>
 
   <body>
-    <Header />
+    <Header {lang} {t}/>
 
     <main>
       <slot />
