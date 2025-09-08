@@ -1,32 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {ui} from '../i18n/ui';
+
+const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 ---
 
-<Layout title="Games" showFooter={false}>
-  <img class="subpageBanner" src="/gamesBanner.png" />
-  <img class="gamesTitle" src="/games-title.png" />
+  <Layout title="Games" showFooter={false} t={t}>
+  <img class="subpageBanner" src="/gamesBanner-Eng.png" />
   <div class="pageCont">
     
     <div class="gamesCont">
       <img class="gamesBackground" src="/games-bg.png" />
+      <img class="gamesCoverImg" src="/games-cover.png" />
       <div class="gameReplayBox">
-        <img class="replayBanner" src="games-fps.png" />
+        <img class="replayBanner" src="/games-fps.png" />
         <div class="gamesReplayCont">
-
+          <p class="toBeUploaded">{t('test')}</p>
         </div>
       </div>
 
       <div class="gameReplayBox">
-        <img class="replayBanner" src="games-fps.png" />
+        <img class="replayBanner" src="/games-moba.png" />
         <div class="gamesReplayCont">
-
+          <p class="toBeUploaded">{t('test')}</p>
         </div>
       </div>
 
       <div class="gameReplayBox">
-        <img class="replayBanner" src="games-fps.png" />
+        <img class="replayBanner" src="/games-grp.png" />
         <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
+        </div>
+      </div>
 
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-immersive.png" />
+        <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
         </div>
       </div>
 

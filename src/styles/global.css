@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: auto; 
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #ffed4c;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes bouncing {
@@ -78,6 +82,10 @@ body {
 
 }
 
+.lang-switch {
+  margin-right: 1%;
+}
+
 .back-to-top-btn {
   display: none; 
   position: fixed;
@@ -101,6 +109,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   text-align: center;
   background-color: #ffed4c;
 }
@@ -118,7 +127,7 @@ body {
 .teamfoto {
   background-color: #ddd;
   height: 100%;
-  width: 200vh;
+  width: 150vh;
   clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
   object-fit: cover;
   position: absolute;
@@ -150,7 +159,7 @@ body {
   width: 70vh;
   height: auto;
   position: absolute;
-  top: 50vh;
+  top: 70%;
   right: 5%;
   opacity: 0;
   animation: fadeInLeft 1s ease-out;
@@ -180,7 +189,6 @@ body {
 
 /*滑到哪加載到哪，從左邊飛來*/
 .observe-left {
-  opacity: 0;
   transform: translateX(-200px);
   transition: all 1s ease;
   animation-fill-mode: forwards;
@@ -209,21 +217,20 @@ body {
 
 /*放社群媒體塊塊的地方*/
 .news {
-  justify-content: center;
-  width: 80%;
-  height: 600px;
+  display: flex; 
+  justify-content: center; 
+  justify-self: center;
   align-items: center;
-  display: flex;
+  margin-left: 30%;
+  width: 80%; 
+  height: 80%; 
 }
 
 /*社群媒體外接動態塊塊*/
 .socialMedBlk {
-  height: 80%;
-  width: 100%;
-  margin: 0 5% 10% 10%;
-  display: block;
-  border-radius: 20px;
-  justify-content: space-between;
+  margin-right: 5%;
+  height: 80%; 
+  width: 80%;
 }
 
 /*團體介紹標題*/
@@ -244,18 +251,18 @@ body {
 
 /*心結廚房logo*/
 .groupIcon {
-  margin: 0 10% 10% 10%;
-  max-width: 50%;
-  max-height: 50%;
+  margin: 5% 5% 10% 5%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 /*團體文字介紹*/
 .groupText {
   max-height: 60%;
-  max-width: 70%;
+  max-width: 50%;
   background-color: #4c4c4c;
   color: white;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
   margin: 3% 0 5% 0;
   padding: 3%;
   font-size: 1.2rem;
@@ -313,8 +320,9 @@ body {
 }
 
 .footerImg {
-  height: 100vh;
-  width: 35%;
+  height: 100%;
+  max-width: auto;
+  object-fit: contain;
   align-self: flex-end;
 }
 
@@ -378,7 +386,7 @@ body {
   width: 80%;
   height: auto;
   margin: 0 2% 2% 9%;
-  font-size: 18px;
+  font-size: 16px;
   display: none;
 }
 
@@ -472,33 +480,33 @@ body {
   display: block;
 }
 
-  .trpgCont {
+.trpgCont {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-  }
+ }
 
-   /*跑團即心結圖片區塊*/
-  .trpg-des-wrap {
+ /*跑團即心結圖片區塊*/
+.trpg-des-wrap {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-  }
+}
 
-  /*跑團即心結圖片介紹*/
-  .trpgSlogan {
+/*跑團即心結圖片介紹*/
+.trpgSlogan {
     width: 80%;
     opacity: 0;
     animation: fadeInUp 0.5s;
     animation-fill-mode: forwards;
-  }
+}
 
-  /*回放區塊*/
-  .trpgWrap {
+/*回放區塊*/
+.trpgWrap {
     height: 130vh;
     width: 70%;
     background-color: #333;
@@ -506,38 +514,38 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
+}
 
-  .trpgWrap > a {
+.trpgWrap > a {
   display: block;
   width: 40%; 
   margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   text-align: center; 
-  }
+}
 
-  /*回放影片縮圖*/
-  .videoThumbnail {
+/*回放影片縮圖*/
+.videoThumbnail {
     width: 60%;
     margin: 5% auto 0 auto;
     opacity: 0;
     animation: fadeInLeft 1s;
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
-  }
+}
 
-  /*開始播放按鈕*/
-  .playButton {
+/*開始播放按鈕*/
+.playButton {
     width: 100%;
     opacity: 0;
     animation: fadeInLeft 1s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
-  }
+}
 
-  /*回放列表標題*/
-  .otherPlaybacks {
+/*回放列表標題*/
+.otherPlaybacks {
     margin-top: 10%;
     max-width: 20%;
     opacity: 0;
@@ -545,9 +553,19 @@ body {
     animation: fadeInRight 1s ease-out;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-  }
+}
 
-  .playbackCont{
+.otherPlaybacksEng {
+    margin-top: 10%;
+    max-width: 40%;
+    opacity: 0;
+    align-items: flex-start;
+    animation: fadeInRight 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.playbackCont{
     height:50vh;
     width: 90%;
     margin: 5%;
@@ -571,15 +589,15 @@ body {
     justify-content: flex-start;
     gap: 10px;
     row-gap: 15px;
-  }
+}
 
-  .playbackCont a {
+.playbackCont a {
     width: calc(50% - 5px);
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #eee;
-  }
+}
 
 .playbackCont a img {
     max-width: 100%;
@@ -594,18 +612,9 @@ body {
   padding: 0;
 }
 
-.gamesTitle {
-  max-width: 70%;
-  max-height: auto;
-  margin: 3% 15% 5% 15%;
-  justify-self: center;
-  align-self: center;
-}
-
 .gamesBackground {
-  width: 100%;
-  max-height: 500vh;
-  margin: 0;
+  width: 80%;
+  max-height: 550vh;
   position: absolute;
   left: 50%; 
   transform: translateX(-50%); 
@@ -620,11 +629,20 @@ body {
   overflow: visible;
   position: relative;
   padding: 20px; 
+}
 
+.gamesCoverImg {
+  width: 100%;
+  height: 50%;
+  margin: 5% 0 0 0;
+  align-self: center;
+  justify-self: center;
+  overflow: visible;
+  position: relative;
 }
 
 .gameReplayBox {
-  width: 120%;
+  width: 90%;
   height: 30%;
   margin: 5% 15% 0 15%;
   align-self: center;
@@ -638,7 +656,7 @@ body {
   width: 100%;
   height: auto;
   margin-right: 10%;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
   grid-area: content-overlay; 
   justify-self: center;
   align-self: center;
@@ -648,7 +666,7 @@ body {
 
 .gamesReplayCont{
   position: absolute; 
-  top: 20%;
+  top: 25%;
   left: 10%;
   width: 80%; 
   height: 50%;
@@ -670,5 +688,90 @@ body {
     width: 0;
     height: 0;
   }
+}
 
+.toBeUploaded {
+  margin: 5% 15% 5% 15%;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+.monthlyCont {
+  width: 100%;
+  height: auto;
+  margin: 5% 15% 0 15%;
+  padding: 20px; 
+  flex-direction: column;
+}
+
+.monthlyTitle {
+  max-width: 70%;
+  max-height: auto;
+  margin: 3% 15% 5% 15%;
+  justify-self: center;
+  align-self: center;
+}
+
+.monthlyGameBanner {
+  width: 90%;
+  height: auto;
+  margin: 0 10% 5% 10%;
+  align-self: center;
+}
+
+.monthlyGamePic{
+  max-width: 80%;
+  height: auto;
+  margin: 0 10% 5% 10%;
+  justify-self: center;
+  align-self: center;
+}
+
+.monthlyEventBanner {
+  width: 80%;
+  height: auto;
+  margin: 5% 10% 5% 10%;
+  align-self: center;
+}
+
+.eventsCont {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%; 
+  display: flex;
+}
+
+.eventsBlk {
+  margin: 3%;
+  width: 45%;
+}
+
+.chefsMonthly {
+  width: 40%;
+  height: auto;
+  margin: 0 40% 5% 10%;
+}
+
+.chefsBlog {
+  width: 80%;
+  height: 80%;
+  margin: 0 10% 5% 10%;
+  align-self: center;
+  background-color: green;
+}
+
+.contactsCont {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%; 
+  display: flex;
+}
+
+.contactsBlk {
+ width: 30%;
+ margin: 3%;
 }

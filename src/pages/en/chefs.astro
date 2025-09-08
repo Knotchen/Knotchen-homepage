@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ChefsList from "../../components/pages/chefs/ChefsList-eng.astro";
+import {ui} from '../../i18n/ui';
+
+const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
+---
+
+<html lang="en">
+<Layout title={t('nav.chefs')} t={t}>
+  <img class="subpageBanner" src="/aboutUsBanner-Eng.png" />
+  <div class="pageCont">
+    <div class="charIntroWrap">
+      <img class="charBanner" id="MaInNo" src="/MaInNo-banner-eng.png" />
+      <div class="textBlock" id="MaInNo">
+        <p> {t('MaInNo-intro')}</p>
+        <p> {t('MainNo-intro-2')}</p>
+      </div>
+
+      <img class="charBanner" id="grass" src="/grass-banner-eng.png" />
+      <div class="textBlock" id="grass">
+        <p> {t('grass-intro')} </p>
+        <p> {t('grass-intro-2')} </p>
+      </div>
+
+      <img class="charBanner" id="dobird" src="/dobird-banner-eng.png" />
+      <div class="textBlock" id="dobird">
+        <p> {t('dobird-intro')}</p>
+        <p> {t('dobird-intro-2')}</p>
+      </div>
+
+      <img class="charBanner" id="honey" src="/honey-banner-eng.png" />
+      <div class="textBlock" id="honey">
+        <p>{t('honey-intro')}</p>
+        <p>{t('honey-intro-2')}</p>
+      </div>
+
+      <img class="charBanner" id="zeroOne" src="/zeroOne-banner-eng.png" />
+      <div class="textBlock" id="zeroOne">
+        <p> {t('zeroOne-intro')} </p>
+        <p> {t('zeroOne-intro-2')} </p>
+      </div>
+
+      <img class="charBanner" id="karlos" src="/karlos-banner-eng.png" />
+      <div class="textBlock" id="karlos">
+        <p> {t('karlos-intro')} </p>
+        <p> {t('karlos-intro-2')} </p>
+      </div>
+
+      <img class="charBanner" id="skye" src="/skye-banner-eng.png" />
+      <div class="textBlock" id="skye">
+        <p> {t('skye-intro')} </p>
+        <p> {t('skye-intro-2')} </p>
+      </div>
+
+      <img class="charBanner" id="jkiol" src="/jkiol-banner-eng.png" />
+      <div class="textBlock" id="jkiol">
+        <p> {t('jkiol-intro')} </p>
+        <p> {t('jkiol-intro-2')} </p>
+      </div>
+
+       <img class="charBanner" id="miyar" src="/miyar-banner-eng.png" />
+      <div class="textBlock" id="miyar">
+        <p> {t('miyar-intro')} </p>
+        <p> {t('miyar-intro-2')} </p>
+      </div>
+
+       <img class="charBanner" id="lucy" src="/lucy-banner-eng.png" />
+      <div class="textBlock" id="lucy">
+        <p> {t('lucy-intro')} </p>
+        <p> {t('lucy-intro-2')} </p>
+      </div>
+    </div>
+
+    <div class="clipArtCtn">
+      <img class="charClipArt" id="MaInNo" src="/MaInNo-Clipart.png" />
+      <img class="charClipArt" id="grass" src="/grass-clipart.png" />
+      <img class="charClipArt" id="dobird" src="/dobird-clipart.png" />
+      <img class="charClipArt" id="honey" src="/honey-clipart.png" />
+      <img class="charClipArt" id="miyar" src="/jkiol-clipart.png" />
+      <img class="charClipArt" id="zeroOne" src="/zeroOne-clipart.png" />
+      <img class="charClipArt" id="karlos" src="/karlos-clipart.png" />
+      <img class="charClipArt" id="skye" src="/skye-clipart.png" />
+      <img class="charClipArt" id="jkiol" src="/jkiol-clipart.png" />
+      <img class="charClipArt" id="lucy" src="/jkiol-clipart.png" />
+    </div>
+
+    <ChefsList />
+  </div>
+</Layout>
+</html>

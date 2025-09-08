@@ -1,8 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {ui} from '../i18n/ui';
+
+const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 ---
 
 <Layout title="Contact Us">
   <img class="subpageBanner" src="/contactsBanner.png" />
-  <div class="pageCont"></div>
+  <div class="pageCont">
+    <div class="contactsCont">
+      <img class="contactsBlk" src="/contact-blk.png" />
+      <img class="contactsBlk" src="/contact-blk.png" />
+      <img class="contactsBlk" src="/contact-blk.png" />
+    </div>
+  </div>
 </Layout>

@@ -1,12 +1,17 @@
 ---
 import "../styles/global.css";
-
-import Header from "../components/Header.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Header from '../components/Header.astro'; 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import Footer from "../components/Footer.astro";
+import type {ui} from '../i18n/ui';
+import type {LanguageKey, Translations} from '../i18n/utils';
+
 
 interface Props {
   title: string;
-  showFooter?: boolean; 
+  showFooter?: boolean;
 }
 
 const { title, showFooter = true } = Astro.props;
@@ -20,7 +25,7 @@ const { title, showFooter = true } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/knotchen-logo.png" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Knotchen 心結廚房</title>
+    <title> Knotchen 心結廚房 </title>
 
     <!-- Bootstrap -->
     <link
@@ -56,10 +61,23 @@ const { title, showFooter = true } = Astro.props;
       });
     </script>
 
-    <!-- 廚師介紹 -->
+    <!-- Members -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const charButtons = document.querySelectorAll(".charSelect");
+        const lang = document.documentElement.lang || 'zh-Hant';
+        const isEng = lang === 'en';
+        console.log("Language detected:", lang);
+
+        const charButtons = document.querySelectorAll(".charSelect, .charSelected");
+
+        charButtons.forEach((btn) => {
+          const btnID = btn.id.replace("Btn", "");
+          const isSelected = btn.classList.contains("charSelected");
+          const suffix = isSelected
+            ? isEng ? "-chosen-eng.png" : "-chosen.png"
+            : isEng ? "-default-eng.png" : "-default.png";
+          (btn as HTMLImageElement).src = `/${btnID}${suffix}`;
+        });
 
         charButtons.forEach((button) => {
           button.addEventListener("click", function () {
@@ -80,18 +98,18 @@ const { title, showFooter = true } = Astro.props;
             charButtons.forEach((btn) => {
               const btnID = btn.id.replace("Btn", "");
               if (btn) {
-                (btn as HTMLImageElement).src = `/${btnID}-default.png`;
+                const suffix = isEng ? "-default-eng.png" : '-default.png';
+                (btn as HTMLImageElement).src = `/${btnID}${suffix}`;
               }
               btn.classList.remove("charSelected");
               btn.classList.add("charSelect");
             });
 
-            if (button) {
-              (button as HTMLImageElement).src = `/${displayID}-chosen.png`;
-            }
-            console.log(displayID);
+            const suffixChosen = isEng ? "-chosen-eng.png" : "-chosen.png";
+            (button as HTMLImageElement).src = `/${displayID}${suffixChosen}`;
             button.classList.remove("charSelect");
             button.classList.add("charSelected");
+
           });
         });
       });
@@ -122,13 +140,11 @@ const { title, showFooter = true } = Astro.props;
             document.documentElement.scrollTop = 0;
         };
       });
-
-
     </script>
   </head>
 
   <body>
-    <Header />
+    <Header {lang} {t}/>
 
     <main>
       <slot />

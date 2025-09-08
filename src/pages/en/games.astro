@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {ui} from '../../i18n/ui';
+
+const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
+---
+
+<html lang="en">
+  <Layout title="Games" showFooter={false} t={t}>
+  <img class="subpageBanner" src="/gamesBanner-Eng.png" />
+  <div class="pageCont">
+    
+    <div class="gamesCont">
+      <img class="gamesBackground" src="/games-bg.png" />
+      <img class="gamesCoverImg" src="/games-cover.png" />
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-fps-eng.png" />
+        <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
+        </div>
+      </div>
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-moba-eng.png" />
+        <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
+        </div>
+      </div>
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-grp-eng.png" />
+        <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
+        </div>
+      </div>
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-immersive-eng.png" />
+        <div class="gamesReplayCont">
+          <p class="toBeUploaded">{t('test')}</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
+</Layout>
+</html>

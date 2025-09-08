@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {ui} from '../../i18n/ui';
+
+const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
+---
+
+<html lang="en">
+<Layout title="Monthly Recipes" t="{t}">
+  <img class="subpageBanner" src="/monthlyBanner-Eng.png" />
+  <div class="pageCont">
+    <div class="monthlyCont">
+      <img class="monthlyTitle" src="/monthly-games-eng.png" />
+      <img class="monthlyGamePic" src="/monthly-games-pic.png"/>
+      <p style="margin-left: 80%">Monthly Illustrator: Miyar</p>
+      <img class="monthlyEventBanner" src="/monthly-event-eng.png"/>
+      <div class="eventsCont">
+        <img class="eventsBlk" src="/event-box.png"/>
+        <img class="eventsBlk" src="/event-box.png"/>
+      </div>
+    </div>
+  </div>
+</Layout>
+</html>

@@ -1,43 +1,65 @@
 ---
+import { getLocalizedPath } from '../i18n/utils'; // Import getLocalizedPath
+import { languages, ui } from '../i18n/ui'; // Import the type for 'ui'
 
+interface Props {
+  lang: keyof typeof ui;
+  t: (key: keyof (typeof ui)['zh-Hant']) => string; // The 't' function based on your default locale's keys
+}
+
+const { lang, t } = Astro.props;
+
+const currentPathWithoutLocale = lang === 'zh-Hant'
+  ? Astro.url.pathname // If default, path is already without locale prefix
+  : Astro.url.pathname.substring(`/${lang}`.length); // Remove '/en' prefix
+
+const switchLangText = lang === 'zh-Hant'
+  ? t('lang.english') 
+  : languages['zh-Hant']; 
 ---
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <!-- 品牌 LOGO -->
-      <a class="navbar-brand" href="/">回到主頁</a>
+      <a class="lang-switch" href={getLocalizedPath(currentPathWithoutLocale, lang === 'zh-Hant' ? 'en' : 'zh-Hant')}> 
+        {switchLangText} 
+      </a>
 
-      <!-- 手機選單按鈕 -->
+      <a class="navbar-brand" href={getLocalizedPath('/', lang)}>
+        {t('site.home')}
+      </a>
+
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- 導覽選單 -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/monthly-recipes">每月料理</a>
+            <a class="nav-link" href={getLocalizedPath('/monthly-recipes', lang)}>{t('nav.monthly-recipes')}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/chefs">團員介紹</a>
+            <a class="nav-link" href={getLocalizedPath('/chefs', lang)}>{t('nav.chefs')}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/trpg-records">TRPG跑團記錄</a>
+            <a class="nav-link" href={getLocalizedPath('/trpg-records', lang)}>{t('nav.trpg-records')}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/games">遊戲專區</a>
+            <a class="nav-link" href={getLocalizedPath('/games', lang)}>{t('nav.games')}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kitchen-universe">廚房宇宙</a>
+            <a class="nav-link" href={getLocalizedPath('/kitchen-universe', lang)}>{t('nav.kitchen-universe')}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">聯絡我們</a>
+            <a class="nav-link" href={getLocalizedPath('/contact', lang)}>{t('nav.contact')}</a>
           </li>
         </ul>
       </div>

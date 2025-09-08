@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="Home Page" showFooter={false}>
@@ -9,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_HK/sdk.js#xfbml=1&version=v22.0"></script>
   <div class="content">
     <div class="banner">
-      <img class="teamfoto" src="/test-Img.png" alt="我是酷炫圖片" />
+      <img class="teamfoto" src="/team-foto.png" alt="我是酷炫圖片" />
       <img class="knotchenBanner" src="/knotchenBanner.png" alt="心結廚房" />
       <img class="knotchenQuote" src="/knotchenQuote.png" alt="我們好幫幫" />
     </div>
@@ -22,10 +23,12 @@ import Layout from "../layouts/Layout.astro";
       alt="最新資訊"
     />
 
-    <div class="news">
-      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61574492781953" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-    </div>
-      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    <div class="news observe-left">
+      <div class="socialMedBlk">
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61574492781953" data-tabs="timeline" data-width="700" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+      <div class="socialMedBlk">
+        <div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="700" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
       </div>
     </div>
 
@@ -74,7 +77,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <p>@心結廚房2025 | 特別感謝渡鳥的貢獻</p>
     </div>
-    <img class="footerImg" src="/test-Img.png">
+    <img class="footerImg" src="/team-foto-2.png">
     </div>
     </div>
   </div>

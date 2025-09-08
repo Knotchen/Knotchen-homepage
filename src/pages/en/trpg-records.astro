@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import PlayBackList from "../../components/pages/trpg-records/PlayBackList.astro";
+---
+
+<Layout title="TRPG Records" showFooter={false}>
+  <img class="subpageBanner" src="/trpgBanner-Eng.png" />
+  <div class="trpgCont">
+    <div class="trpg-des-wrap">
+      <img class="trpgSlogan" src="/trpgSlogan-eng.png" />
+      <div class="trpgWrap">
+        <img class="videoThumbnail" src="/coc-video-thumbnail-eng.png" />
+        <a href="https://www.youtube.com/watch?v=hT4TulaozrA" target="_blank"
+        ><img class="playButton" src="/play-video-eng.png" /></a>
+        <img class="otherPlaybacksEng" src="/other-playbacks-eng.png" />
+        <div class="playbackCont">
+          <a href="https://www.youtube.com/watch?v=KvR7RDmddIo&t=1s" target="_blank">
+          <img src="/trpg-playback1.webp" /> 
+          <p class="vidTitle">The Swamp Man EP.0</p>
+          </a>
+          <a href="https://www.youtube.com/watch?v=hT4TulaozrA" target="_blank">
+          <img src="/trpg-playback2.webp" /> 
+          <p class="vidTitle">The Swamp Man EP.1</p>
+          </a>
+        </div>
+      </div> 
+    </div>
+  </div>
+<img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
+</Layout>
+
