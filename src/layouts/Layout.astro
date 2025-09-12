@@ -84,7 +84,7 @@ const { title, showFooter = true } = Astro.props;
             const displayID = button.id.replace("Btn", "");
 
             const charDisplays = document.querySelectorAll(
-              ".charBanner, .textBlock, .charClipArt"
+              ".charBanner, .textBlock, .charClipArt, .knowMeMore"
             );
             charDisplays.forEach((charDisplay) => {
               (charDisplay as HTMLElement).style.display = "none";

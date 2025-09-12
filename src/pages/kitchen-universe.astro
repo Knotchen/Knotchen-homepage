@@ -1,8 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {ui} from '../i18n/ui';
+
+const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 ---
 
-<Layout title="Knotchenverse">
-  <img class="subpageBanner" src="/creationsBanner.png" />
-  <div class="pageCont"></div>
+<Layout title="Knotchenverse" showFooter={false}>
+<style>
+    body {
+      background-color: #203144;
+    }
+
+</style>
+
+<div style="display: flex; flex-direction: row">
+<div style="display: flex; flex-direction: column">
+  <video class="universeBanner" autoplay muted playsinline>
+  <source src="knotchenverse-header-anim.mp4" type="video/mp4">
+</video>
+    <div class="btnContainer">
+      <img class="comicBtn"  class="universeLinkButton" src="test-universe-btn.png" />
+      <img class="otherBtn" class="universeLinkButton" src="test-universe-btn.png" />
+      <img class="otherBtn" class="universeLinkButton" src="test-universe-btn.png" />
+    </div>
+</div>
+  <img class="coverPage" src="test-cover-blk.png" />
+</div>
+
 </Layout>
+
+
+<script>
+
+</script>

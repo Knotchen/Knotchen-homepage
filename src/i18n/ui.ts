@@ -47,7 +47,7 @@ export const ui = {
     'nav.chefs': 'Meet the Crew',
     'nav.trpg-records': 'TRPG Campaign Logs',
     'nav.games': 'Games Zone',
-    'nav.kitchen-universe': 'Knotchen Universe',
+    'nav.kitchen-universe': 'KnotchenVerse',
     'nav.contact': 'Contact Us',
     'footer': 'Knotchen @2025',
     'lang.english': '繁體中文', 

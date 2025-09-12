@@ -6,7 +6,7 @@ import {ui} from '../i18n/ui';
 const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 ---
 
-<Layout title={t('nav.chefs')} t="{t}">
+<Layout title={t('nav.chefs')} t="{t}" showfooter={false}>
   <img class="subpageBanner" src="/aboutUsBanner.png" />
   <div class="pageCont">
     <div class="charIntroWrap">
@@ -14,18 +14,23 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
       <div class="textBlock" id="MaInNo">
         <p> {t('MaInNo-intro')}</p>
         <p> {t('MainNo-intro-2')}</p>
+        <img class="knowMeMore" id="MaInNo" src="/test-intro-block.png" />
       </div>
 
       <img class="charBanner" id="grass" src="/grass-banner.png" />
       <div class="textBlock" id="grass">
         <p> {t('grass-intro')} </p>
         <p> {t('grass-intro-2')} </p>
+        <a href="">
+          <img class="knowMeMore" id="grass" src="/test-intro-grass.png" />
+        </a>
       </div>
 
       <img class="charBanner" id="dobird" src="/dobird-banner.png" />
       <div class="textBlock" id="dobird">
         <p> {t('dobird-intro')}</p>
         <p> {t('dobird-intro-2')}</p>
+        <img class="knowMeMore" id="dobird" src="/test-intro-bird.png" />
       </div>
 
       <img class="charBanner" id="honey" src="/honey-banner.png" />
@@ -59,13 +64,13 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
         <p> {t('jkiol-intro-2')} </p>
       </div>
 
-       <img class="charBanner" id="miyar" src="/miyar-banner.png" />
+      <img class="charBanner" id="miyar" src="/miyar-banner.png" />
       <div class="textBlock" id="miyar">
         <p> {t('miyar-intro')} </p>
         <p> {t('miyar-intro-2')} </p>
       </div>
 
-       <img class="charBanner" id="lucy" src="/lucy-banner.png" />
+      <img class="charBanner" id="lucy" src="/lucy-banner.png" />
       <div class="textBlock" id="lucy">
         <p> {t('lucy-intro')} </p>
         <p> {t('lucy-intro-2')} </p>
@@ -77,12 +82,12 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
       <img class="charClipArt" id="grass" src="/grass-clipart.png" />
       <img class="charClipArt" id="dobird" src="/dobird-clipart.png" />
       <img class="charClipArt" id="honey" src="/honey-clipart.png" />
-      <img class="charClipArt" id="miyar" src="/jkiol-clipart.png" />
+      <img class="charClipArt" id="miyar" src="/miyar-clipart.png" />
       <img class="charClipArt" id="zeroOne" src="/zeroOne-clipart.png" />
       <img class="charClipArt" id="karlos" src="/karlos-clipart.png" />
       <img class="charClipArt" id="skye" src="/skye-clipart.png" />
       <img class="charClipArt" id="jkiol" src="/jkiol-clipart.png" />
-      <img class="charClipArt" id="lucy" src="/jkiol-clipart.png" />
+      <img class="charClipArt" id="lucy" src="/lucy-clipart.png" />
     </div>
 
     <ChefsList />

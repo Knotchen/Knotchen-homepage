@@ -52,7 +52,7 @@ body {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
@@ -64,6 +64,17 @@ body {
   from {
     opacity: 0;
     transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -212,7 +223,7 @@ body {
 .newsBanner {
   width: 80%;
   height: auto;
-  margin: 5% 10% 5% 10%;
+  margin: 10% 10% 5% 10%;
 }
 
 /*放社群媒體塊塊的地方*/
@@ -265,7 +276,7 @@ body {
   border-radius: 10px;
   margin: 3% 0 5% 0;
   padding: 3%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 
@@ -355,16 +366,23 @@ body {
 /*標題以下的容器區塊*/
 .pageCont {
   width: 100%;
-  max-height: 75vh;
+  max-height: 75dvh;
   display: flex;
   align-items: flex-start;
+  position: relative;
+}
+
+.pageCont-universe {
+  width: 100%;
+  max-height: 75dvh;
+  display: flex;
   position: relative;
 }
 
 /*團員標題及文字區塊*/
 .charIntroWrap {
   height: auto;
-  max-width: 40%;
+  width: 70%;
   float: left;
   box-sizing: border-box;
   opacity: 0;
@@ -375,7 +393,7 @@ body {
 
 /*團員標題*/
 .charBanner {
-  width: 85%;
+  width: 80%;
   height: auto;
   margin: 15% 2% 5% 7%;
   display: none;
@@ -401,11 +419,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 /*立繪*/
 .charClipArt {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
   opacity: 0;
   animation: fadeInRight 0.3s ease-out;
@@ -478,6 +497,12 @@ body {
 
 #MaInNo {
   display: block;
+}
+
+.knowMeMore {
+  margin-top: 10%;
+  width: 70%;
+  height: auto;
 }
 
 .trpgCont {
@@ -719,7 +744,8 @@ body {
 .monthlyGameBanner {
   width: 90%;
   height: auto;
-  margin: 0 10% 5% 10%;
+  margin-bottom: 5%;
+  margin-top: 0;
   align-self: center;
 }
 
@@ -774,4 +800,50 @@ body {
 .contactsBlk {
  width: 30%;
  margin: 3%;
+}
+
+.universeLinkButton {
+  width: 40%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.universeBanner {
+  width: 50%;
+  height: auto;
+  margin: 1% 0 0 3%;
+}
+
+.coverPage {
+  width: 50%;
+  max-height: 30%;
+  opacity: 0;
+  animation: fadeInDown 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+  mask-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  -webkit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.comicBtn {
+  width: 70%;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+.otherBtn {
+  width: 50%;  
+  margin-top: 5%;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 }
