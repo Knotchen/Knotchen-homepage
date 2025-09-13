@@ -6,7 +6,7 @@ const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
 ---
 
 <html lang="en">
-<Layout title="Monthly Recipes" t="{t}">
+<Layout title="Monthly Recipes" t="{t}" showFooter={false}>
   <img class="subpageBanner" src="/monthlyBanner-Eng.png" />
   <div class="pageCont">
     <div class="monthlyCont">
