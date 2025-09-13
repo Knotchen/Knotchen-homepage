@@ -269,16 +269,23 @@ body {
 
 /*團體文字介紹*/
 .groupText {
-  max-height: 60%;
+  max-height: 70%;
   max-width: 50%;
   background-color: #4c4c4c;
   color: white;
   border-radius: 10px;
   margin: 3% 0 5% 0;
   padding: 3%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
+  overflow: scroll;
 }
+
+.groupText::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+} 
 
 .otherCont {
   height:100vh;
@@ -289,12 +296,18 @@ body {
 
 /*其他連結區塊*/
 .otherLinks {
-  height: 100vh;
+  height: 100%;
   width: 65%;
   align-self: flex-start;
   background-color: #4c4c4c;
   color: white;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
 .otherLinks h1 {
@@ -303,18 +316,29 @@ body {
 
 /*放按鈕容器的地方*/
 .linkCont {
-  height: 70vh;
+  height: 70%;
   width: 100%;
   align-self: center;
   margin-left: 5%;
   display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.linkCont::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 /*放按鈕的地方共左右兩塊*/
 .linkBtnCont {
-  height: 500px;
+  height: 70%;
   width: 45%;
   align-content: center;
+  flex-basis: 45%;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 /*連結按鈕*/
@@ -322,6 +346,8 @@ body {
   max-width: 70%;
   max-height: 40%;
   margin: 10% 10% 0 10%;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .linkButton:hover {
@@ -332,9 +358,11 @@ body {
 
 .footerImg {
   height: 100%;
-  max-width: auto;
+  width: auto;
   object-fit: contain;
   align-self: flex-end;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .banner .text {

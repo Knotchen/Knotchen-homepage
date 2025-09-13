@@ -11,6 +11,12 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
       background-color: #203144;
     }
 
+    body::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
 </style>
 
 <div style="display: flex; flex-direction: row">
