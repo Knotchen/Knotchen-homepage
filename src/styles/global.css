@@ -337,8 +337,8 @@ body {
 
 /*連結按鈕*/
 .linkButton {
-  max-width: 70%;
-  max-height: 40%;
+  width: 60%;
+  height: auto;
   margin: 10% 10% 0 10%;
   flex-shrink: 1;
   flex-grow: 1;
@@ -352,7 +352,7 @@ body {
 
 .footerImg {
   height: 100%;
-  width: auto;
+  max-width: 50%;
   object-fit: contain;
   align-self: flex-end;
   flex-shrink: 1;
