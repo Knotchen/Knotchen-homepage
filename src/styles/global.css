@@ -1065,7 +1065,6 @@ body {
     align-self: center;
     animation: fadeInLeft 0.3s ease-out;
     animation-fill-mode: forwards;
-    animation-delay: 0.5s;
   }
 
   .clipart-responsive{
