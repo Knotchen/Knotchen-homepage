@@ -95,10 +95,15 @@ const { title, showFooter = true } = Astro.props;
 
         charButtons.forEach((button) => {
           button.addEventListener("click", function () {
-            const displayID = button.id.replace("Btn", "");
+          const displayID = button.id.replace("Btn", "");
 
           const screenWidth = window.innerWidth;
           const mobileBrkpt = 768;
+
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });          
 
         if (screenWidth > mobileBrkpt) {
             const charDisplays = document.querySelectorAll(

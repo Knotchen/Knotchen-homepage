@@ -1037,7 +1037,7 @@ body {
   .pageCont-aboutUs {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
   }
 
   .charClipArt{
@@ -1086,7 +1086,7 @@ body {
   }
 
   .otherChar {
-    width: 100%;
+    width: 95%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1109,7 +1109,7 @@ body {
 
   .aboutUsMenu {
     display: flex;
-    width: 100%;
+    width: 95%;
     height: 30%;
     align-items: center;
     justify-self: center;
@@ -1121,7 +1121,7 @@ body {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    width: 100%;
+    width: 95%;
     height: auto;
     justify-self: center;
     align-self: center;
