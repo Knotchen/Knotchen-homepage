@@ -1,48 +1,54 @@
 ---
 import "../../styles/global.css";
-import Layout from "../../layouts/Layout.astro";
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
-const chefsURL = getRelativeLocaleUrl("en", "chefs");
-const trpgURL = getRelativeLocaleUrl("en", "trpg-records");
-const gamesURL = getRelativeLocaleUrl("en", "games");
+import Layout from "../../layouts/Layout.astro";
+
 ---
 
-<html lang="en">
 <Layout title="Home Page" showFooter={false}>
   <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_HK/sdk.js#xfbml=1&version=v22.0"></script>
   <div class="content">
     <div class="banner">
-      <img class="teamfoto" src="/team-foto.png" alt="Team photo" />
-      <img class="knotchenBanner" src="/knotchenBanner-Eng.png" alt="Knotchen" />
-      <img class="knotchenQuote" src="/knotchenQuote-Eng.png" alt="Knotchen Quotes" />
+      <img class="teamfoto" src="/team-foto.png" alt="我是酷炫圖片" />
+      <img class="knotchenBanner" src="/knotchenBanner-Eng.png" alt="心結廚房" />
+      <img class="knotchenQuote" src="/knotchenQuote-Eng.png" alt="我們好幫幫" />
     </div>
 
-    <div class="scrollDown">Scroll for more! ⭣</div>
+    <div class="scrollDown">Sroll for more! ⭣</div>
+  </div>
 
+  <div class="content">
     <img
-      class="newsBanner observe-left"
+      class="newsBanner observe-right"
       src="/knotchenNews-Eng.png"
-      alt="News"
+      alt="最新資訊"
     />
 
-    <div class="news observe-left">
-      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61574492781953" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-    </div>
-      <div class="socialMedBlk observe-left"><div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    <div class="newsContainer">
+      <img class="news-main" src="/news-main-Eng.png" />
+      <img class="news-sub" src="/news-subtitle-Eng.png" />
+        <div class="fb-page socialMedBlk" data-href="https://www.facebook.com/profile.php?id=61574492781953" 
+        data-tabs="timeline, events" data-small-header="true"
+        data-width="700" data-height="400" 
+        data-adapt-container-width="true" 
+        data-hide-cover="false" 
+        data-show-facepile="true">
       </div>
     </div>
 
+  <div class="content">
     <img
       class="groupBanner observe-right"
       src="/knotchenGroup-Eng.png"
       alt="團體介紹"
     />
 
+    <img class="intro-main" src="/intro-main-Eng.png" />
+    <img class="intro-sub" src="/intro-subtitle-Eng.png" />
     <div class="groupIntro">
-      <img class="groupIcon observe-left" src="/circle-icon.png" />
-      <div class="groupText observe-left">
+      <img class="groupIcon" src="/circle-icon.png" />
+      <div class="groupText">
       <p>Ever seen a team start beef just by gaming?</p>
       <h4>Yep—that's us!</h4>
       <p>Back in 2018, we were just a group of gamers. With little beefs popping up 
@@ -59,40 +65,39 @@ const gamesURL = getRelativeLocaleUrl("en", "games");
         <h4>You ready for order? Keep scrolling!</h4>
       </div>
     </div>
+    </div>
 
     <div class="otherCont">
      <div class="otherLinks observer-left">
-      <h1>Get to Know More About Us</h1>
+      <h2>Click the Link Below and Explore!</h2>
       <div class="linkCont">
         <div class="linkBtnCont">
-          <a href="/en/monthly-recipes">
+          <a href="/monthly-recipes">
             <img class="linkButton" src="/monthlyLink-Eng.png" />
           </a>
-          <a href="/en/chefs">
+          <a href="/chefs">
             <img class="linkButton" src="/aboutUsLink-Eng.png" />
           </a>
-          <a href="/en/trpg-records">
+          <a href="/trpg-records">
             <img class="linkButton" src="/trpgLink-Eng.png" />
           </a>
         </div>
         <div class="linkBtnCont">
-          <a href="/en/games">
+          <a href="/games">
             <img class="linkButton" src="/gamesLink-Eng.png" />
           </a>
-          <a href="/en/kitchen-universe">
+          <a href="/kitchen-universe">
             <img class="linkButton" src="/creationsLink-Eng.png" />
           </a>
-          <a href="/en/contact">
+          <a href="/contact">
             <img class="linkButton" src="/contactsLink-Eng.png" />
           </a>
         </div>
       </div>
-      <p>@Knotchen 2025</p>
+      <p>@Knotchen 2025 | Special Thanks to Dobird</p>
     </div>
     <img class="footerImg" src="/team-foto-2.png">
     </div>
     </div>
-  </div>
     <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/back-to-top-btn.png"/>
 </Layout>
-</html>

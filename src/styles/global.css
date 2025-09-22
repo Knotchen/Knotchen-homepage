@@ -10,9 +10,10 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffed4c;
+  background-color: #ffef5e;
   margin: 0;
   padding: 0;
+  height: auto;
 }
 
 @keyframes bouncing {
@@ -52,7 +53,7 @@ body {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(200px);
   }
   to {
     opacity: 1;
@@ -82,19 +83,9 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .back-to-top-btn {
-    bottom: 15px;
-    right: 15px;
-    padding: 12px 16px;
-    font-size: 16px;
-  }
-
-
-}
-
 .lang-switch {
   margin-right: 1%;
+  font-size: 1rem;
 }
 
 .back-to-top-btn {
@@ -116,33 +107,29 @@ body {
 /*主頁容器*/
 .content {
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-items: center;
   text-align: center;
-  background-color: #ffed4c;
 }
 
 /*照片、大字及團體名言區塊的容器*/
 .banner {
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  height: 700px;
   width: 100%;
   position: relative;
 }
 
 /*大字旁的團體照*/
 .teamfoto {
-  background-color: #ddd;
-  height: 100%;
-  width: 150vh;
+  height: 70%;
+  width: 90%;
   clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
   object-fit: cover;
   position: absolute;
-  right: 20%;
+  right: min(20%, 0);
   opacity: 0;
   animation: fadeInRight 1s ease-out;
   animation-fill-mode: forwards;
@@ -155,11 +142,11 @@ body {
 
 /*心結廚房大字*/
 .knotchenBanner {
-  width: 70vh;
+  width: min(70vh, 70%);
   height: auto;
   position: absolute;
-  top: 30%;
-  right: 5%;
+  top: 50%;
+  margin-left: 55%;
   opacity: 0;
   animation: fadeInLeft 1s ease-out;
   animation-fill-mode: forwards;
@@ -167,11 +154,11 @@ body {
 
 /*心結廚房格言*/
 .knotchenQuote {
-  width: 70vh;
+  width: min(70vh, 80%);
   height: auto;
   position: absolute;
-  top: 70%;
-  right: 5%;
+  top: 80%;
+  margin-left: 50%;
   opacity: 0;
   animation: fadeInLeft 1s ease-out;
   animation-fill-mode: forwards;
@@ -189,9 +176,7 @@ body {
   justify-content: center;
   font-weight: 400;
   font-size: 1rem;
-  margin-top: 3%;
   border-radius: 20px;
-  display: flex;
   opacity: 0;
   animation: bouncing 6s infinite;
   animation-delay: 2s;
@@ -226,22 +211,32 @@ body {
   margin: 10% 10% 5% 10%;
 }
 
-/*放社群媒體塊塊的地方*/
-.news {
-  display: flex; 
-  justify-content: center; 
-  justify-self: center;
+.news-main {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  display: none;
+}
+
+.news-sub {
+  width: 80%;
+  height: auto;
+  align-self: center;
+  display: none;
+}
+
+.newsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 30%;
-  width: 80%; 
-  height: 80%; 
+  flex-direction: column;
 }
 
 /*社群媒體外接動態塊塊*/
 .socialMedBlk {
-  margin-right: 5%;
-  height: 80%; 
-  width: 80%;
+  width: 45%;
+  flex-shrink: 0;
 }
 
 /*團體介紹標題*/
@@ -250,6 +245,20 @@ body {
   height: auto;
   margin: 5% 10% 5% 5%;
   align-self: center;
+}
+
+.intro-main {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  display: none;
+}
+
+.intro-sub {
+  width: 80%;
+  height: auto;
+  align-self: center;
+  display: none;
 }
 
 /*團體介紹區塊*/
@@ -263,14 +272,14 @@ body {
 /*心結廚房logo*/
 .groupIcon {
   margin: 5% 5% 10% 5%;
-  max-width: 60%;
-  max-height: 60%;
+  min-width: 20%;
+  height: auto;
 }
 
 /*團體文字介紹*/
 .groupText {
-  max-height: 70%;
-  max-width: 50%;
+  height: 70%;
+  width: 55%;
   background-color: #4c4c4c;
   color: white;
   border-radius: 10px;
@@ -394,6 +403,14 @@ body {
   position: relative;
 }
 
+.pageCont-aboutUs {
+  width: 100%;
+  max-height: 75dvh;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-areas: "banner" "text" "clipart";
+}
+
 .pageCont-universe {
   width: 100%;
   max-height: 75dvh;
@@ -404,7 +421,7 @@ body {
 /*團員標題及文字區塊*/
 .charIntroWrap {
   height: auto;
-  width: 70%;
+  width: 100%;
   float: left;
   box-sizing: border-box;
   opacity: 0;
@@ -415,20 +432,23 @@ body {
 
 /*團員標題*/
 .charBanner {
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 15% 2% 5% 7%;
   display: none;
+  grid-area: "banner";
 }
 
 /*團員文字介紹*/
 .textBlock {
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 2% 2% 9%;
   font-size: 16px;
   display: none;
+  grid-area: "text";
 }
+
 
 .textBlock p {
   margin-bottom: 20px;
@@ -437,26 +457,31 @@ body {
 /*立繪容器*/
 .clipArtCnt {
   height: auto;
-  width: 35%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  grid-area: "clipart";
 }
 
 /*立繪*/
 .charClipArt {
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
   opacity: 0;
   animation: fadeInRight 0.3s ease-out;
   animation-fill-mode: forwards;
+  justify-self: center;
+  display: none;
+}
+
+.clipart-responsive {
   display: none;
 }
 
 /*團員一覽區塊*/
 .otherChar {
-  max-width: 25%;
+  max-width: 100%;
   height: 100%;
   display: grid;
   opacity: 0;
@@ -470,16 +495,15 @@ body {
   width: 30%;
   height: auto;
   display: flex;
-  float: right;
   justify-self: end;
-  margin-right: 10%;
+  margin-right: 20%;
   margin-bottom: 10%;
 }
 
 /*團員列表*/
 .aboutUsMenu {
   width: 100%;
-  height: 60vh;
+  height: 70%;
   display: flex;
   position: relative;
   overflow-y: scroll;
@@ -487,7 +511,7 @@ body {
 
 /*放置團員獨立按鈕的容器*/
 .charMenu {
-  width: 100%;
+  width: 50%;
   height: 70vh;
   margin-left: 30%;
   flex-direction: column;
@@ -517,7 +541,12 @@ body {
   cursor: pointer;
 }
 
-#MaInNo {
+#MaInNo.clipart-responsive {
+  display: none;
+}
+
+.charBanner#MaInNo, .charClipArt#MaInNo, 
+.textBlock#MaInNo, .knowMeMore#MaInNo {
   display: block;
 }
 
@@ -525,6 +554,7 @@ body {
   margin-top: 10%;
   width: 70%;
   height: auto;
+  grid-area: "text";
 }
 
 .trpgCont {
@@ -868,4 +898,246 @@ body {
   animation: fadeInLeft 1s ease-out;
   animation-fill-mode: forwards;
   animation-delay: 1.5s;
+}
+
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    display: none;
+  }
+
+  .banner {
+    height: 700px;
+  }
+
+  .knotchenBanner {
+    margin-top: 20%;
+    margin-left: 15%;
+    width: 80%;
+  }
+
+  .knotchenQuote {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .scrollDown {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .newsBanner {
+    display: none;
+  }
+
+  .newsContainer {
+    height: 600px;
+  }
+
+  .news-main {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    display: block;
+  }
+
+  .news-sub {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    margin-top: 3%;
+    display: block;
+  }
+
+  .newsContainer { 
+    width: 100%;
+  }
+
+  .socialMedBlk {
+    width: 85%;
+    height: auto;
+    margin-top: 5%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .groupBanner {
+    width: 95%;
+    margin-left: 10%;
+    display: none;
+  }
+
+  .intro-main {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  display: block;
+}
+
+.intro-sub {
+  width: 80%;
+  height: auto;
+  align-self: center;
+  margin-top: 3%;
+  display: block;
+}
+
+  .groupIntro {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .groupIcon {
+    width: 40%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .groupText {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .otherCont {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .otherLinks {
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+
+  .footerImg {
+    display: none;
+  }
+
+  .linkCont {
+    margin: 0 0 5% 0;
+  }
+
+
+  .linkButton {
+    margin: 5% 5% 0 0;
+  }
+
+  .subpageBanner{
+    max-width: 80%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .pageCont-aboutUs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .charClipArt{
+    display: none;
+  }
+
+  #MaInNo.clipart-responsive {
+    display: block;
+  }
+
+  #MaInNo.charClipArt {
+    display: none;
+  }
+
+  .charIntroWrap {
+    width: 90%;
+    margin: 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .charBanner {
+    width: 80%;
+    align-self: center;
+  }
+
+  .clipart-responsive{
+    max-width: 80%;
+    justify-self: center;
+    animation: fadeInRight 0.3s ease-out;
+    animation-fill-mode: forwards;
+    justify-self: center;
+    align-self: center;
+    display: none;
+  }
+
+  .textBlock {
+    font-size: 0.9rem;
+    width: 95%;
+    margin-top: 5%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .otherChar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInRight 0.3s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;    
+  }
+
+  .aboutUsMore {
+    width: 30%;
+    height: auto;
+    align-self: center;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+
+  .aboutUsMenu {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    margin-right: 30%;
+  }
+
+  .charMenu {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .charSelected {
+    max-width: 40%;
+    height: auto;
+  }
+
+  .charSelect {
+    max-width: 40%;
+    height: auto;
+  }
+
+  .knowMeMore {
+    align-self: center;
+    justify-self: center;
+  }
+
 }

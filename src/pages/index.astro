@@ -16,31 +16,39 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="scrollDown">往下滑，不然心結你喔:3 ⭣</div>
+  </div>
 
+  <div class="content">
     <img
-      class="newsBanner observe-left"
+      class="newsBanner observe-right"
       src="/knotchenNews.png"
       alt="最新資訊"
     />
 
-    <div class="news observe-left">
-      <div class="socialMedBlk">
-        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61574492781953" data-tabs="timeline" data-width="700" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-      </div>
-      <div class="socialMedBlk">
-        <div class="fb-page" data-href="https://www.facebook.com/pikapikachu2022" data-tabs="timeline" data-width="700" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    <div class="newsContainer">
+      <img class="news-main" src="/news-main.png" />
+      <img class="news-sub" src="/news-subtitle.png" />
+        <div class="fb-page socialMedBlk" data-href="https://www.facebook.com/profile.php?id=61574492781953" 
+        data-tabs="timeline, events" data-small-header="true"
+        data-width="700" data-height="400" 
+        data-adapt-container-width="true" 
+        data-hide-cover="false" 
+        data-show-facepile="true">
       </div>
     </div>
 
+  <div class="content">
     <img
       class="groupBanner observe-right"
       src="/knotchenGroup.png"
       alt="團體介紹"
     />
 
+    <img class="intro-main" src="/intro-main.png" />
+    <img class="intro-sub" src="/intro-subtitle.png" />
     <div class="groupIntro">
-      <img class="groupIcon observe-left" src="/circle-icon.png" />
-      <div class="groupText observe-left">
+      <img class="groupIcon" src="/circle-icon.png" />
+      <div class="groupText">
         <p>你有見過打遊戲打出心結的團隊嗎？</p>
         <h4>對的，就是我們！</h4>
         <p>在2018年，本來只是專門打遊戲的群組，因為各種心結紛爭不斷衍生取名叫
@@ -56,6 +64,7 @@ import Layout from "../layouts/Layout.astro";
           色香味俱全；不時有「心結特快餐車」衝撞外送其他客人。</p>
           <h4>還沒吃到餐過嗎？那就趕緊下滑！</h4>
       </div>
+    </div>
     </div>
 
     <div class="otherCont">
@@ -90,6 +99,5 @@ import Layout from "../layouts/Layout.astro";
     <img class="footerImg" src="/team-foto-2.png">
     </div>
     </div>
-  </div>
     <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
 </Layout>

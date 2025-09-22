@@ -68,6 +68,20 @@ const { title, showFooter = true } = Astro.props;
         const isEng = lang === 'en';
         console.log("Language detected:", lang);
 
+        const screenWidth = window.innerWidth;
+        const mobileBrkpt = 768;
+
+        window.addEventListener('resize', () => {
+
+          if (screenWidth <= mobileBrkpt) {
+            console.log("Now on a mobile screen. Screen width:", screenWidth);
+            // Apply mobile-specific changes
+          } else {
+            console.log("Now on a desktop screen. Screen width:", screenWidth);
+            // Apply desktop-specific changes
+          }
+        });
+
         const charButtons = document.querySelectorAll(".charSelect, .charSelected");
 
         charButtons.forEach((btn) => {
@@ -83,9 +97,15 @@ const { title, showFooter = true } = Astro.props;
           button.addEventListener("click", function () {
             const displayID = button.id.replace("Btn", "");
 
+          const screenWidth = window.innerWidth;
+          const mobileBrkpt = 768;
+
+        if (screenWidth > mobileBrkpt) {
             const charDisplays = document.querySelectorAll(
               ".charBanner, .textBlock, .charClipArt, .knowMeMore"
             );
+            const clipartHide = document.querySelectorAll(".clipart-responsive");
+
             charDisplays.forEach((charDisplay) => {
               (charDisplay as HTMLElement).style.display = "none";
             });
@@ -94,6 +114,33 @@ const { title, showFooter = true } = Astro.props;
             elementsDisplay.forEach((el) => {
               (el as HTMLElement).style.display = "block";
             });
+
+            clipartHide.forEach((clipartHide) => {
+              (clipartHide as HTMLElement).style.display = "none";
+            });
+
+        } else if (screenWidth <= mobileBrkpt) {
+            const charDisplays = document.querySelectorAll(
+              ".charBanner, .textBlock, .knowMeMore, .clipart-responsive"
+            );
+
+            const clipartHide = document.querySelectorAll(".charClipArt")
+            const minArt = document.querySelector("#MaInNo.charClipArt")
+
+            charDisplays.forEach((charDisplay) => {
+              (charDisplay as HTMLElement).style.display = "none";
+            });
+
+            const elementsDisplay = document.querySelectorAll(`#${displayID}`);
+            elementsDisplay.forEach((el) => {
+              (el as HTMLElement).style.display = "block";
+            });
+
+            clipartHide.forEach((clipartHide) => {
+              (clipartHide as HTMLElement).style.display = "none";
+            });
+        }
+
 
             charButtons.forEach((btn) => {
               const btnID = btn.id.replace("Btn", "");
