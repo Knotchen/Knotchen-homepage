@@ -7,18 +7,20 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 
 <Layout title="Monthly Recipes" t="{t}" showfooter={false}>
   <img class="subpageBanner" src="/monthlyBanner.png" />
-  <div class="pageCont">
     <div class="monthlyCont">
       <img class="monthlyTitle" src="/monthly-games.png" />
+      <img class="monthly-game-main" src="/monthly-games-main.png" />
+      <img class="monthly-game-sub" src="/monthly-games-subtitle.png" />
       <img class="monthlyGamePic" src="/monthly-games-pic.png"/>
-      <p style="margin-left: 80%">本月畫師：彌亞</p>
+      <p class="illust-contribute">本月畫師：彌亞</p>
       <img class="monthlyEventBanner" src="/monthly-event.png"/>
+      <img class="monthly-event-main" src="/monthly-event-main.png" />
+      <img class="monthly-event-sub" src="/monthly-event-subtitle.png" />
       <div class="eventsCont">
         <img class="eventsBlk" src="/event-box.png"/>
         <img class="eventsBlk" src="/event-box.png"/>
       </div>
     </div>
-  </div>
 </Layout>
 <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/back-to-top-btn.png"/>
 

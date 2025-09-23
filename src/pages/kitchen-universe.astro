@@ -19,15 +19,19 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
 
 </style>
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column">
+<div class="universe-container">
+<div class="universe-btn-cont">
   <video class="universeBanner" autoplay muted playsinline>
-  <source src="/knotchenverse-header-anim.mp4" type="video/mp4">
-</video>
+    <source src="/knotchenverse-header-anim.mp4" type="video/mp4">
+  </video>
+    <img class="cover-responsive" src="/test-cover-blk.png" />
     <div class="btnContainer">
       <img class="comicBtn"  class="universeLinkButton" src="/test-universe-btn.png" />
       <img class="otherBtn" class="universeLinkButton" src="/test-universe-btn.png" />
       <img class="otherBtn" class="universeLinkButton" src="/test-universe-btn.png" />
+      <img class="mobile-btn" src="/universe-btn-mobile.png" />
+      <img class="mobile-btn" src="/universe-btn-mobile.png" />
+      <img class="mobile-btn" src="/universe-btn-mobile.png" />
     </div>
 </div>
   <img class="coverPage" src="/test-cover-blk.png" />

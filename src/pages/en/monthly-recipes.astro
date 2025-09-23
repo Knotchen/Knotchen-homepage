@@ -6,20 +6,23 @@ const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
 ---
 
 <html lang="en">
-<Layout title="Monthly Recipes" t="{t}" showFooter={false}>
+<Layout title="Monthly Recipes" t="{t}" showfooter={false}>
   <img class="subpageBanner" src="/monthlyBanner-Eng.png" />
-  <div class="pageCont">
     <div class="monthlyCont">
-      <img class="monthlyTitle" src="/monthly-games-eng.png" />
+      <img class="monthlyTitle" src="/monthly-games.png" />
+      <img class="monthly-game-main" src="/monthly-games-main-eng.png" />
+      <img class="monthly-game-sub" src="/monthly-games-subtitle-eng.png" />
       <img class="monthlyGamePic" src="/monthly-games-pic.png"/>
-      <p style="margin-left: 80%">Monthly Illustrator: Miyar</p>
-      <img class="monthlyEventBanner" src="/monthly-event-eng.png"/>
+      <p class="illust-contribute">Monthly Illustrator: Miyar</p>
+      <img class="monthlyEventBanner" src="/monthly-event-Eng.png"/>
+      <img class="monthly-event-main" src="/monthly-event-main-eng.png" />
+      <img class="monthly-event-sub" src="/monthly-event-subtitle-eng.png" />
       <div class="eventsCont">
         <img class="eventsBlk" src="/event-box.png"/>
         <img class="eventsBlk" src="/event-box.png"/>
       </div>
     </div>
-  </div>
 </Layout>
-  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/../back-to-top-btn.png"/>
+<img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/back-to-top-btn.png"/>
+
 </html>

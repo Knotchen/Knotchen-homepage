@@ -411,13 +411,6 @@ body {
   grid-template-areas: "banner" "text" "clipart";
 }
 
-.pageCont-universe {
-  width: 100%;
-  max-height: 75dvh;
-  display: flex;
-  position: relative;
-}
-
 /*團員標題及文字區塊*/
 .charIntroWrap {
   height: auto;
@@ -782,6 +775,7 @@ body {
   height: auto;
   margin: 5% 15% 0 15%;
   padding: 20px; 
+  display: flex;
   flex-direction: column;
 }
 
@@ -793,12 +787,13 @@ body {
   align-self: center;
 }
 
-.monthlyGameBanner {
-  width: 90%;
-  height: auto;
-  margin-bottom: 5%;
-  margin-top: 0;
-  align-self: center;
+.monthly-game-main, .monthly-game-sub,
+.monthly-event-main, .monthly-event-sub {
+    display: none;
+}
+
+.illust-contribute {
+  margin-left: 80%;
 }
 
 .monthlyGamePic{
@@ -854,6 +849,17 @@ body {
  margin: 3%;
 }
 
+.universe-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.universe-btn-cont {
+  display: flex;
+  flex-direction: column;
+}
+
 .universeLinkButton {
   width: 40%;
   height: auto;
@@ -877,6 +883,10 @@ body {
   -webkit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
+.cover-responsive {
+  display: none;
+}
+
 .btnContainer {
   display: flex;
   flex-direction: column;
@@ -898,6 +908,10 @@ body {
   animation: fadeInLeft 1s ease-out;
   animation-fill-mode: forwards;
   animation-delay: 1.5s;
+}
+
+.mobile-btn {
+  display: none;
 }
 
 
@@ -1138,8 +1152,158 @@ body {
   }
 
   .knowMeMore {
+    width: 30%;
     align-self: center;
     justify-self: center;
   }
+
+  .trpgCont {
+    width: 100%;
+    margin-top: 5%;
+    min-height: 20%;
+  }
+
+  .trpg-des-wrap{
+    width: 90%;
+  }
+
+  .trpgSlogan {
+    width: 100%;
+  }
+
+  .trpgWrap {
+    width: 90%;
+    border-radius: 20px;
+    height: 500px;
+  }
+
+  .otherPlaybacks {
+    max-width: 40%;
+  }
+
+  .otherPlaybacksEng {
+    max-width: 60%;
+  }
+
+  .playbackCont a {
+    font-size: 0.9rem;
+  }
+
+  .gamesCont {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-items: center;
+  }
+  
+  .gamesBackground {
+    width: 85%;
+    height: 100%;
+  }
+
+  .gamesReplayCont {
+    width: 70%;
+    left: 15%;
+    top: 27%;
+    justify-self: center;
+  }
+
+  .monthlyCont {
+    margin: 0;
+    padding: 0;
+  }
+
+  .monthlyTitle, .monthlyEventBanner {
+    display: none;
+  }
+
+  .monthly-game-main, .monthly-event-main {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    display: block;
+    margin-top: 10%;
+  }
+
+  .monthly-game-sub, .monthly-event-sub {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    margin-top: 3%;
+    display: block;
+  }
+
+  .monthlyGamePic {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .illust-contribute {
+    font-size: 0.8rem;
+    margin-left: 60%;
+  }
+
+  .eventsCont {
+    flex-direction: column;
+  }
+
+  .eventsBlk {
+    align-self: center;
+    width: 70%;
+  }
+
+  .contactsCont {
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .contactsBlk {
+    width: 70%;
+    align-self: center;
+  }
+
+  .universe-container {
+    flex-direction: column;
+  }
+
+  .universeBanner {
+    width: 70%;
+  }
+
+  .coverPage {
+    display: none;
+  }
+
+  .cover-responsive {
+    display: block;
+    width: 70%;
+    height: 70%;
+    align-self: center;
+    opacity: 0;
+    animation: fadeInDown 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+    mask-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  }
+
+  .universeLinkButton, .comicBtn, .otherBtn {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin-top: 5%;
+    align-self: center;
+    opacity: 0;
+    animation: fadeInLeft 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+
 
 }
