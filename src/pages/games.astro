@@ -11,6 +11,29 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
     <div class="gamesCont">
       <img class="gamesBackground" src="/games-bg.png" />
       <img class="gamesCoverImg" src="/games-cover.png" />
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-grp.png" />
+        <div class="gamesReplayCont">
+           <a class="upload-box" href="https://www.youtube.com/watch?v=c-kU3P6Tsb8">
+            <img src="/barotrauma-01.jpg">
+            <p>鉤！捕！獸！我 @#$%^&* --(#`Д´)ﾉ | 潛淵症 | ft.泡麵.露西.大豆</p>
+          </a> 
+          <a class="upload-box" href="https://www.youtube.com/watch?v=ce0t3XRNpRk">
+            <img src="/barotrauma-02.jpg">
+            <p>保存並退出? | 潛淵症 | ft.泡麵.露西.大豆.卡卡</p>
+          </a> 
+          <a class='upload-box' href="https://youtu.be/9LXQci-DrHQ">
+            <img src="/among-us-01.jpg">
+            <p>Among Us七分鐘</p>
+          </a> 
+          <a class="upload-box" href="https://www.youtube.com/watch?v=sB-Iz-4fD-A">
+            <img src="/among-us-02.jpg">
+            <p>Among Us四分鐘</p>
+          </a> 
+        </div>
+      </div>
+
       
       <div class="gameReplayBox">
         <img class="replayBanner" src="/games-fps.png" />
@@ -27,20 +50,16 @@ const t = (key: keyof (typeof ui)['zh-Hant']) => ui['zh-Hant'][key];
       </div>
 
       <div class="gameReplayBox">
-        <img class="replayBanner" src="/games-grp.png" />
-        <div class="gamesReplayCont">
-          <p class="toBeUploaded">{t('test')}</p>
-        </div>
-      </div>
-
-      <div class="gameReplayBox">
         <img class="replayBanner" src="/games-immersive.png" />
         <div class="gamesReplayCont">
-          <p class="toBeUploaded">{t('test')}</p>
+          <a class="upload-box" href="https://youtu.be/tGQTowlLm6A">
+            <img src="/daitsu-repo.jpg">
+            <p>大豆單人Repo精華</p>
+          </a> 
         </div>
       </div>
 
     </div>
     </div>
-  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="back-to-top-btn.png"/>
+  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/back-to-top-btn.png"/>
 </Layout>
