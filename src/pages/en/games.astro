@@ -8,11 +8,34 @@ const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
 <html lang="en">
   <Layout title="Games" showFooter={false} t={t}>
   <img class="subpageBanner" src="/gamesBanner-Eng.png" />
-  <div class="pageCont">
     
     <div class="gamesCont">
       <img class="gamesBackground" src="/games-bg.png" />
       <img class="gamesCoverImg" src="/games-cover.png" />
+
+      <div class="gameReplayBox">
+        <img class="replayBanner" src="/games-grp-eng.png" />
+        <div class="gamesReplayCont">
+           <a class="upload-box" href="https://www.youtube.com/watch?v=c-kU3P6Tsb8">
+            <img src="/barotrauma-01.jpg">
+            <p>Barotrauma 01 ft. MaInNo, Lucy, Daitsu</p>
+          </a> 
+          <a class="upload-box" href="https://www.youtube.com/watch?v=ce0t3XRNpRk">
+            <img src="/barotrauma-02.jpg">
+            <p>Barotrauma 02 ft. MaInNo, Lucy, Carlos, Daitsu</p>
+          </a> 
+          <a class='upload-box' href="https://youtu.be/9LXQci-DrHQ">
+            <img src="/among-us-01.jpg">
+            <p>Among Us 7 minutes clip</p>
+          </a> 
+          <a class="upload-box" href="https://www.youtube.com/watch?v=sB-Iz-4fD-A">
+            <img src="/among-us-02.jpg">
+            <p>Among Us 4 minutes clip</p>
+          </a> 
+        </div>
+      </div>
+
+      
       <div class="gameReplayBox">
         <img class="replayBanner" src="/games-fps-eng.png" />
         <div class="gamesReplayCont">
@@ -28,22 +51,17 @@ const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
       </div>
 
       <div class="gameReplayBox">
-        <img class="replayBanner" src="/games-grp-eng.png" />
-        <div class="gamesReplayCont">
-          <p class="toBeUploaded">{t('test')}</p>
-        </div>
-      </div>
-
-      <div class="gameReplayBox">
         <img class="replayBanner" src="/games-immersive-eng.png" />
         <div class="gamesReplayCont">
-          <p class="toBeUploaded">{t('test')}</p>
+          <a class="upload-box" href="https://youtu.be/tGQTowlLm6A">
+            <img src="/daitsu-repo.jpg">
+            <p>Daitsu Repo Single</p>
+          </a> 
         </div>
       </div>
 
     </div>
     </div>
-  </div>
-  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/../back-to-top-btn.png"/>
+  <img id="backToTopBtn" class="back-to-top-btn" title="Go to top" src="/back-to-top-btn.png"/>
 </Layout>
 </html>
