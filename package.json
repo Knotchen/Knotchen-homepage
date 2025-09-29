@@ -6,10 +6,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier, --write",
+    "format:check": "prettier, --check",
+    "prepare": "husky install"
   },
   "dependencies": {
     "astro": "^5.4.1",
     "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^16.2.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
