@@ -15,10 +15,11 @@ interface Props {
 }
 
 const { title, showFooter = true } = Astro.props;
+const webLang = getLangFromUrl(Astro.url); 
 ---
 
 <!doctype html>
-<html lang="zh-Hant">
+<html lang=webLang>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -161,6 +162,8 @@ const { title, showFooter = true } = Astro.props;
             (button as HTMLImageElement).src = `/${displayID}${suffixChosen}`;
             button.classList.remove("charSelect");
             button.classList.add("charSelected");
+
+            console.log("Is that English?: " + isEng);
 
           });
         });

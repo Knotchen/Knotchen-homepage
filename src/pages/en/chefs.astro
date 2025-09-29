@@ -6,8 +6,8 @@ import {ui} from '../../i18n/ui';
 const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
 
 ---
-
-<Layout title={t('nav.chefs')} t="{t}" showfooter={false}>
+<html lang={'en'} data-lang={'en'}>
+  <Layout title={t('nav.chefs')} t="{t}" showfooter={false}>
   <img class="subpageBanner" src="/aboutUsBanner-Eng.png" />
   <div class="pageCont-aboutUs">
     <div class="charIntroWrap">
@@ -103,3 +103,4 @@ const t = (key: keyof (typeof ui)['en']) => ui['en'][key];
     <ChefsList />
   </div>
 </Layout>
+</html>
